@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 $(document).ready(function () {
     $(".sign-in-form").on("submit", function () {
         event.preventDefault();
@@ -17,6 +18,7 @@ $(document).ready(function () {
             }).then(function (response) {
                 window.location.replace(response);
             }).catch(function (err) {
+                // eslint-disable-next-line no-console
                 console.log(err);
             });
         }

@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 $(document).ready(function () {
     $(".create-form").on("submit", function (event) {
         event.preventDefault();
@@ -20,7 +21,8 @@ $(document).ready(function () {
             $("form :input").val("");
             $.post("/api/signup", {
                 data: newMember
-            }).then(function (response) {
+            }).then(function () {
+                // eslint-disable-next-line no-console
                 console.log("Signup.js test: Data returned to client for registration.");
             }).catch(handleSignupError);
         }
