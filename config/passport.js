@@ -7,10 +7,10 @@ passport.use(new LocalStrategy(
     {
       usernameField: "username"
     },
-    function(username, password, done) {
+    function(name, password, done) {
       db.User.findOne({
         where: {
-          username: username
+          name: name
         }
       }).then(function(dbUser) {
         if (!dbUser) {

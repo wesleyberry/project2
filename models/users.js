@@ -5,7 +5,7 @@ module.exports = function(sequelize, DataTypes) {
         id: {
             type: DataTypes.INTEGER,
             defaultValue: DataTypes.UUIDV1,
-            primaryKey: true,
+            primaryKey: true
         },
 
         name: {
@@ -35,7 +35,7 @@ module.exports = function(sequelize, DataTypes) {
         return bcrypt.compareSync(password, this.password);
     };
 
-    User.hook("beforeCreate", function(user) {
+    User.addHook("beforeCreate", function(user) {
         user.password = bcrypt.hashSync(user.password, bcrypt.genSaltSync(10), null);
     });
 

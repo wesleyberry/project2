@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 $(function () {
     $("#signup-submit").on("click", function (event) {
@@ -26,14 +27,18 @@ $(function () {
             $("#pass-reg").val("");
             $("#confirm-reg").val("");
             $("#email-reg").val("");
-
             // post request
+            console.log(newMember);
             $.post("/api/signup", {
-                data: newMember
-            }).then(function () {
+                // data: newMember
+                username: user,
+                email: email,
+                password: pass,
+                role: role
+            }).then(function (data) {
                 window.location.replace(data);
                 // eslint-disable-next-line no-console
-                console.log("Signup.js test: Data returned to client for registration.");
+                // console.log("Signup.js test: Data returned to client for registration.");
             }).catch(handleSignupError);
         }
 
