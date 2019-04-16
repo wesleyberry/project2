@@ -8,11 +8,11 @@ if (process.env.JAWSDB_URL) {
 } else {
     connection = mysql.createConnection({
         host: "localhost",
-        user: "user",
+        user: "root",
         password: "aceofspades!1",
         database: "project2"
     });
-}
+};
 
 connection.connect();
 module.exports = connection;
