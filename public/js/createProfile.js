@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 $(function () {
 // create band profile
     $("#artist-create").on("click", function () {
@@ -89,6 +90,7 @@ $(function () {
             $.ajax("/api/signup", {
                 type: "POST",
                 data: venueProfile
+            // eslint-disable-next-line no-unused-vars
             }).then(function (response) {
                 // window.location.replace(response);
             }).catch(function (err) {

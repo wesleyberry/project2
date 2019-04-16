@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 $(function () {
     $("#login-submit").on("click", function () {
         event.preventDefault();
