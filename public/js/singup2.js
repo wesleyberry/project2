@@ -1,6 +1,5 @@
-/* eslint-disable no-undef */
-$(document).ready(function () {
-    $("#signup-submit").on("click", function (event){
+$(function () {
+    $("#signup-submit").on("click", function (event) {
         event.preventDefault();
 
         var user = $("#user-reg").val().trim();
@@ -8,6 +7,7 @@ $(document).ready(function () {
         var pass = $("#pass-reg").val().trim();
         var confirm = $("#confirm-reg").val().trim();
         var role = $("input[name='role-signup']:checked").val();
+        
         var newMember = {
             username: user,
             email: email,
@@ -41,4 +41,9 @@ $(document).ready(function () {
         $("#confirm-reg").val("");
         $("#email-reg").val("");
     });
+
 });
+
+
+
+
