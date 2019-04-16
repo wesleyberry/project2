@@ -1,7 +1,4 @@
 var db = require("../models");
-// eslint-disable-next-line no-undef
-// var express = require("express");
-// var app = express();
 
 module.exports = function(app) {
 // Get route for retrieving a single post
