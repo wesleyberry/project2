@@ -1,17 +1,16 @@
-// require("dotenv").config();
+require("dotenv").config();
 var express = require("express");
 var exphbs = require("express-handlebars");
 var session = require("express-session");
-var passport = require("./config/passport");
 
 var db = require("./models");
+var passport = require("./config/passport");
+
 
 var app = express();
 
 // eslint-disable-next-line no-undef
 var PORT = process.env.PORT || 3000;
-// eslint-disable-next-line no-redeclare
-var db = require("./models");
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
