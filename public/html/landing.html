@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Landing Page</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles/landing.css">
+
+</head>
+
+<body>
+    <nav id="topbar">
+        <div class="wrapper">
+            <div id="logo">
+                GigBook
+            </div>
+            <div id="nav-right">
+                <button class="btn btn-primary btn-lg log-in" data-toggle="modal" data-target="#login-modal">Log
+                    In</button>
+                <button class="btn btn-primary btn-lg sign-up" data-toggle="modal" data-target="#form-modal">Sign
+                    Up</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- LOGIN MODAL -->
+    <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Login</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="username-login" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="text" class="form-control" id="pass-login" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Show Band or Venue?</label><br>
+                        </div>
+                        <button id="login-submit" type="submit" value="Submit" class="btn btn-primary btn-lg log-in">Log In</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SIGN-UP MODAL -->
+    <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">Sign Up</div>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <input type="text" class="form-control" id="user-reg" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email-reg" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="text" class="form-control" id="pass-reg" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Confirm Password</label>
+                            <input type="text" class="form-control" id="confirm-reg" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="role">Are you an artist or venue?</label>
+                            <br>
+                        </div>
+                        <input type="radio" name="role-signup" id="check-artist" value="artist"> Artist
+                        <br>
+                        <input type="radio" name="role-signup" id="check-venue" value="venue"> Venue
+                        <br>
+                        <button id="signup-submit" type="submit" value="Submit" class="btn btn-primary btn-lg sign-up-main">Sign Up</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div id="main" class="col-12">
+                <h1>Find Talent.</h1>
+                <h1>Find Shows.</h1>
+                <p id="text-desc">The easiest way for bands and venues to stay booked.</p>
+                <button class="btn btn-primary btn-lg sign-up-main" data-toggle="modal" data-target="#form-modal">Sign Up</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-text">
+            &copy; Copyright 2019
+        </div>
+    </footer>
+</body>
+
+</html>
