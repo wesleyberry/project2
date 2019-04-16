@@ -8,11 +8,12 @@ if (process.env.JAWSDB_URL) {
 } else {
     connection = mysql.createConnection({
         host: "localhost",
-        user: "user",
+        user: "root",
         password: "aceofspades!1",
         database: "project2"
     });
-}
+// eslint-disable-next-line no-extra-semi
+};
 
 connection.connect();
 module.exports = connection;
