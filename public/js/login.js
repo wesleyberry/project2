@@ -15,7 +15,7 @@ $(document).ready(function () {
         } else {
             $.ajax("/api/login", {
                 data: signBody
-            }).then(function (response) {
+            }).then(function () {
                 // window.location.replace(response);
             }).catch(function (err) {
                 // eslint-disable-next-line no-console
