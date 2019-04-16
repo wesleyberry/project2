@@ -1,14 +1,19 @@
-module.exports = function(sequelize, DataTypes) {
+module.exports = function( sequelize, DataTypes ) {
     var Artist = sequelize.define("Artist", {
-      // Giving the Artist model a name of type STRING
-      name: DataTypes.STRING
+        id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+        },
+        name: DataTypes.STRING,
+        email: DataTypes.STRING,
+        website: DataTypes.STRING,
+        music_genre: DataTypes.STRING
     });
 
-    Artist.associate = function(models) {
-        // Associating Artist with Posts
-        Artist.hasMany(models.Gig, {
-        });
-    };
+    // Artist Table
+    Artist.associate( function( models ) {
+        models.Artist.belongsToMany( models.Venue, { through: models.Gig })
+    });
 
-  return Artist;
+    return Artist;
 };
