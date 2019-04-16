@@ -40,7 +40,8 @@ $(function () {
             // POST
             $.ajax("/api/signup", {
                 type: "POST",
-                data: bandProfile
+                data: bandProfile            
+                // eslint-disable-next-line no-unused-vars
             }).then(function (response) {
                 // window.location.replace(response);
             }).catch(function (err) {
