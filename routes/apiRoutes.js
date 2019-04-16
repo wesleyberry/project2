@@ -12,16 +12,16 @@ app.use(bodyParser.json());
 
 module.exports = function (app) {
 
-  app.post("/api/loginArtist", passport.authenticate("local"), function (req, res) {
-    // eslint-disable-next-line no-console
-    console.log("Test after Artist authentication: " + req.user);
-    res.json("/bandSign");
-  });
-  app.post("/api/loginVenue", passport.authenticate("local"), function (req, res) {
-    // eslint-disable-next-line no-console
-    console.log("Test after Venue uthentication: " + req.user);
-    res.json("/venueSign");
-  });
+    app.post("/api/loginArtist", passport.authenticate("local"), function (req, res) {
+      // eslint-disable-next-line no-console
+      console.log("Test after Artist authentication: " + req.user);
+      res.json("/bandSign");
+    });
+    app.post("/api/loginVenue", passport.authenticate("local"), function (req, res) {
+      // eslint-disable-next-line no-console
+      console.log("Test after Venue uthentication: " + req.user);
+      res.json("/venueSign");
+    });
 
   app.post("/api/signup", function (req, res) {
     // eslint-disable-next-line no-console
@@ -57,19 +57,18 @@ module.exports = function (app) {
     }
   });
 
-  app.get("/logout", function (req, res) {
-    req.logout();
-    res.redirect("/");
-  });
+    app.get("/logout", function (req, res) {
+      req.logout();
+      res.redirect("/");
+    });
 
-  app.get("/api/user_data", function (req, res) {
-    if (!req.user) {
-      res.json("/");
-    }
-    else {
-      res.json({
-        // Include in here everything we want to return to the user
-      });
-    }
-  });
-};
+    app.get("/api/user_data", function (req, res) {
+      if (!req.user) {
+        res.json("/");
+      } else {
+        res.json({
+          // Include in here everything we want to return to the user
+        });
+      }
+    });
+  }

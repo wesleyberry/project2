@@ -4,11 +4,12 @@ module.exports = function( sequelize, DataTypes ) {
             type: DataTypes.INTEGER,
             primaryKey: true,
         },
-        name: DataTypes.STRING,
+        venueName: DataTypes.STRING,
         street_address: DataTypes.STRING,
         city: DataTypes.STRING,
         state: DataTypes.STRING,
         zipcode: DataTypes.STRING,
+        phone: DataTypes.STRING,
         email: DataTypes.STRING,
         website: DataTypes.STRING
     });

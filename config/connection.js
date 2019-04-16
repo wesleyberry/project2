@@ -7,10 +7,10 @@
 //     connection = mysql.createConnection(process.env.JAWSDB_URL);
 // } else {
 //     connection = mysql.createConnection({
-//         host: "localhost",
-//         user: "root",
-//         password: "aceofspades!1",
-//         database: "project2"
+//         host: "ctgplw90pifdso61.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+//         user: "pskpom2hkolu8ffc",
+//         password: "bkg8rg7zeq6vhqqy",
+//         database: "fl5pnoyhsb6g5rry"
 //     });
 // // eslint-disable-next-line no-extra-semi
 // };
