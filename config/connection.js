@@ -12,6 +12,7 @@ if (process.env.JAWSDB_URL) {
         password: "aceofspades!1",
         database: "project2"
     });
+// eslint-disable-next-line no-extra-semi
 };
 
 connection.connect();
