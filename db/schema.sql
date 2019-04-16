@@ -1,4 +1,4 @@
-### Schema
+/*### Schema
 
 DROP DATABASE IF EXISTS exampledb;
 CREATE DATABASE exampledb;
@@ -39,3 +39,4 @@ CREATE TABLE gigs
   FOREIGN KEY (venue_id) REFERENCES venues(id),
   FOREIGN KEY (artist_id) REFERENCES artists(id)
 );
+*/
