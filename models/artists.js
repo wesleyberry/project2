@@ -5,9 +5,13 @@ module.exports = function( sequelize, DataTypes ) {
             primaryKey: true,
         },
         name: DataTypes.STRING,
-        email: DataTypes.STRING,
+        genre: DataTypes.STRING,
+        instrumentation: DataTypes.STRING,
+        numberOfMembers: DataTypes.INTEGER,
         website: DataTypes.STRING,
-        music_genre: DataTypes.STRING
+        email: DataTypes.STRING,
+        phone: DataTypes.STRING,
+        profileImage: DataTypes.STRING
     });
 
     // Artist Table
