@@ -53,9 +53,14 @@
                             <label for="password">Password</label>
                             <input type="text" class="form-control" id="pass-login" placeholder="">
                         </div>
-                        <!-- <div class="form-group">
-                            <label for="role">Show Band or Venue?</label><br>
-                        </div> -->
+                        <div class="form-group">
+                            <label for="role">Artist or Venue?</label><br>
+                        </div>
+                        <input type="radio" name="role-signup" id="check-artist" value="artist"> Artist
+                        <br>
+                        <input type="radio" name="role-signup" id="check-venue" value="venue"> Venue
+                        <br>
+                        <br>
                         <button id="login-submit" type="submit" value="Submit" class="btn btn-primary btn-lg log-in">Log In</button>
                     </form>
                 </div>
@@ -76,12 +81,8 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label for="username">Username</label>
+                            <label for="username">Artist of Venue Name</label>
                             <input type="text" class="form-control" id="user-reg" placeholder="">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="text" class="form-control" id="email-reg" placeholder="">
                         </div>
                         <div class="form-group">
                             <label for="password">Password</label>

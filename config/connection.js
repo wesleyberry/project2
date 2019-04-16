@@ -9,8 +9,8 @@ if (process.env.JAWSDB_URL) {
     connection = mysql.createConnection({
         host: "localhost",
         user: "root",
-        password: "aceofspades!1",
-        database: "project2"
+        password: "root",
+        database: "gigeasy"
     });
 // eslint-disable-next-line no-extra-semi
 };

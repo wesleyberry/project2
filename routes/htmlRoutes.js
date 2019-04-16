@@ -10,9 +10,9 @@ module.exports = function (app) {
   //   }
   //   res.sendFile(path.join(__dirname, "../public/signup.html"));
   // });
-  app.get("/", isAuthenticated, function(req, res) {
+  app.get("/", function(req, res) {
     // eslint-disable-next-line no-undef
-    res.sendFile(path.join(__dirname, "../public/landing.html"));
+    res.sendFile(path.join(__dirname, "../public/html/landing.html"));
   });
 
   app.get("/bands", isAuthenticated, function (req, res) {
@@ -25,12 +25,12 @@ module.exports = function (app) {
 
   app.get("/venueSign", isAuthenticated, function (req, res) {
     // eslint-disable-next-line no-undef
-    res.sendFile(path.join(__dirname, "../public/venueCreateProfile.html"));
+    res.sendFile(path.join(__dirname, "../public/html/venueCreateProfile.html"));
   });
 
   app.get("/bandSign", isAuthenticated, function (req, res) {
     // eslint-disable-next-line no-undef
-    res.sendFile(path.join(__dirname, "../public/bandCreateProfile.html"));
+    res.sendFile(path.join(__dirname, "../public/html/bandCreateProfile.html"));
   });
 
 };

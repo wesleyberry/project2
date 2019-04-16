@@ -4,28 +4,25 @@ $(function () {
         event.preventDefault();
 
         var user = $("#user-reg").val().trim();
-        var email = $("#email-reg").val().trim();
         var pass = $("#pass-reg").val().trim();
         var confirm = $("#confirm-reg").val().trim();
         var role = $("input[name='role-signup']:checked").val();
 
         var newMember = {
             username: user,
-            email: email,
             password: pass,
             role: role
         };
 
         if (pass !== confirm) {
             alert("Your passwords do not match");
-        } else if (!pass || !user || !confirm || !email || !role) {
+        } else if (!pass || !user || !confirm || !role) {
             alert("Please fill out every field");
         } else {
             // clear form
             $("#user-reg").val("");
             $("#pass-reg").val("");
             $("#confirm-reg").val("");
-            $("#email-reg").val("");
 
             // post request
             $.post("/api/signup", {
