@@ -1,29 +1,44 @@
 html,
 body {
     font-family: 'Lato', sans-serif;
-    color: #000;
+    color: #ffffff;
     background-color: #232426;
     height: 100%;
 }
 
-#profile {
+.profile {
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
-    /* float: left; */
     background: #333437;
     width: 350px;
     height: 100%;
 }
 
-#profile-picture {
+.profile-picture {
     position: relative;
     width: 100%;
 }
 
+.profile-content {
+    padding: 20px;
+}
+
+.band-name {
+    font-weight: 900;
+}
+
+.band-subname {
+    font-style: italic;
+}
+
+.band-genres {
+    font-style: italic;
+    margin-top: 40px;
+}
+
 #feed {
-    overflow: auto;
     margin: auto;
     margin-left: 350px;
     padding: 50px;
@@ -35,12 +50,22 @@ body {
     width: 100%;
 }
 
+#card-display {
+    margin-top: 20px;
+    overflow: auto;
+    height: 100%;
+    padding-bottom: 20px;
+}
+
 .venue-card {
     background: #ffffff;
+    color: #000;
+    border: solid 10px #232426;
     border-radius: 10px;
-    width: 40%;
     float: left;
-    margin: 3%;
+    width: 33.3%;
+    height: 350px;
+    overflow: auto;
 }
 
 .card-text {
@@ -59,7 +84,7 @@ body {
 
 @media screen and (max-width: 640px) {
 
-    #profile {
+    .profile {
         display: none;
     }
 
