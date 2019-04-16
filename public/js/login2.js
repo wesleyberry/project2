@@ -14,14 +14,25 @@ $(function () {
         if (!username || !password || !role) {
             alert("Please fill out every field");
         } else {
-            $.ajax("/api/login", {
-                data: loginBody
-            }).then(function (response) {
-                window.location.replace(response);
-            }).catch(function (err) {
-                // eslint-disable-next-line no-console
-                console.log(err);
-            });
+            // if (role === "artist"){
+            //     $.ajax("/api/loginArist", {
+            //         data: loginBody
+            //     }).then(function (response) {
+            //         // window.location.replace(response);
+            //     }).catch(function (err) {
+            //         // eslint-disable-next-line no-console
+            //         console.log(err);
+            //     });
+            // } else {
+            //     $.ajax("/api/loginVenue", {
+            //     data: loginBody
+            // }).then(function (response) {
+            //     // window.location.replace(response);
+            // }).catch(function (err) {
+            //     // eslint-disable-next-line no-console
+            //     console.log(err);
+            // });
+            // }
         }
 
         // clear form

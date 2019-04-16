@@ -1,0 +1,13 @@
+h1,
+.profile form {
+    color: white;
+}
+
+body{
+    background-color: black;
+}
+
+#venue-create,
+#artist-create {
+    background-color: purple;
+}
