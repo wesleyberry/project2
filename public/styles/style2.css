@@ -1,0 +1,21 @@
+html, body {
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    height: 100%;
+    background-color: #232426;
+}
+
+h1{
+    text-align: center;
+    padding-top: 15px;
+}
+
+#venue-create,
+#artist-create {
+    background-color: #af4ca3;
+}
+
+#venue-create
+#artist-create {
+    margin-bottom: 20px;
+}
