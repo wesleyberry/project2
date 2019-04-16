@@ -7,7 +7,7 @@ module.exports = function( sequelize, DataTypes ) {
         artistName: DataTypes.STRING,
         genre: DataTypes.STRING,
         instrumentation: DataTypes.STRING,
-        numberOfMembers: DataTypes.INT,
+        numberOfMembers: DataTypes.INTEGER,
         email: DataTypes.STRING,
         phone: DataTypes.STRING,
         profileImage: DataTypes.STRING,
