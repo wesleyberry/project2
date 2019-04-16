@@ -10,6 +10,10 @@ module.exports = function (app) {
   //   }
   //   res.sendFile(path.join(__dirname, "../public/signup.html"));
   // });
+  app.get("/", isAuthenticated, function(req, res) {
+    // eslint-disable-next-line no-undef
+    res.sendFile(path.join(__dirname, "../public/landing.html"));
+  });
 
   app.get("/bands", isAuthenticated, function (req, res) {
     res.send("band");
