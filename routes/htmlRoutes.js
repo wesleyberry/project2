@@ -1,27 +1,32 @@
-var db = require("../models");
+var path = require("path");
 
-module.exports = function(app) {
-  // Load index page
-  app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
-      });
-    });
+var isAuthenticated = require("../config/middleware/isAuthenticated");
+
+module.exports = function (app) {
+
+  // app.get("/", function (req, res) {
+  //   if (req.user) {
+  //     res.redirect("/login");
+  //   }
+  //   res.sendFile(path.join(__dirname, "../public/signup.html"));
+  // });
+
+  app.get("/bands", isAuthenticated, function (req, res) {
+    res.send("band");
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
+  app.get("/venues", isAuthenticated, function (req, res) {
+    res.send("venue");
   });
 
-  // Render 404 page for any unmatched routes
-  app.get("*", function(req, res) {
-    res.render("404");
+  app.get("/venueSign", isAuthenticated, function (req, res) {
+    // eslint-disable-next-line no-undef
+    res.sendFile(path.join(__dirname, "../public/venueCreateProfile.html"));
   });
+
+  app.get("/bandSign", isAuthenticated, function (req, res) {
+    // eslint-disable-next-line no-undef
+    res.sendFile(path.join(__dirname, "../public/bandCreateProfile.html"));
+  });
+
 };
