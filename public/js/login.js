@@ -16,7 +16,7 @@ $(document).ready(function () {
             $.ajax("/api/login", {
                 data: signBody
             }).then(function (response) {
-                window.location.replace(response);
+                // window.location.replace(response);
             }).catch(function (err) {
                 // eslint-disable-next-line no-console
                 console.log(err);
