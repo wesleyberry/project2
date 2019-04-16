@@ -1,0 +1,79 @@
+html,
+body {
+    font-family: 'Lato', sans-serif;
+    color: #000;
+    background-color: #232426;
+    height: 100%;
+}
+
+#profile {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    /* float: left; */
+    background: #333437;
+    width: 350px;
+    height: 100%;
+}
+
+#profile-picture {
+    position: relative;
+    width: 100%;
+}
+
+#feed {
+    overflow: auto;
+    margin: auto;
+    margin-left: 350px;
+    padding: 50px;
+    height: 100%;
+}
+
+#search {
+    margin: auto;
+    width: 100%;
+}
+
+.venue-card {
+    background: #ffffff;
+    border-radius: 10px;
+    width: 40%;
+    float: left;
+    margin: 3%;
+}
+
+.card-text {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.tags {
+    font-size: 14px;
+    font-style: italic;
+}
+
+@media screen and (max-width: 640px) {
+
+    #profile {
+        display: none;
+    }
+
+}
+
+/* .card {
+    float: left;
+    margin: 20px;
+} */
+
+
+
+/* FONT BANK 
+
+font-family: 'Lato', sans-serif;
+
+*/
