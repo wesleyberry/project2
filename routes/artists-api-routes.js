@@ -1,7 +1,9 @@
-var db = require("./models");
+var db = require("../models");
 // eslint-disable-next-line no-undef
-var app = express();
+// var express = require("express");
+// var app = express();
 
+module.exports = function(app) {
 // Get route for retrieving a single post
 app.get("/api/artists/:id/:date", function (req, res) {
     // Here we add an "include" property to our options in our findOne query
@@ -36,3 +38,4 @@ app.post("/api/artists", function(req, res) {
     res.json(dbArtist);
   });
 });
+}
