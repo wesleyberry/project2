@@ -11,9 +11,9 @@ module.exports = function( sequelize, DataTypes ) {
     });
 
     // Artist Table
-    Artist.associate( function( models ) {
+    Artist.associate = function( models ) {
         models.Artist.belongsToMany( models.Venue, { through: models.Gig })
-    });
+    };
 
     return Artist;
 };

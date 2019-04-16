@@ -31,8 +31,8 @@ app.set("view engine", "handlebars");
 
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
-require("./routes/artsts-api-routes")(app);
-require("./routes/venues-api-routes")(app);
+require("./routes/artists-api-routes")(app);
+// require("./routes/venues-api-routes")(app);
 
 var syncOptions = { force: false };
 
