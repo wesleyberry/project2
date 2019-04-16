@@ -22,6 +22,7 @@ $(document).ready(function () {
             $.post("/api/signup", {
                 data: newMember
             }).then(function () {
+                window.location.replace(data);
                 // eslint-disable-next-line no-console
                 console.log("Signup.js test: Data returned to client for registration.");
             }).catch(handleSignupError);
