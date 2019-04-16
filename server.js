@@ -8,7 +8,9 @@ var db = require("./models");
 
 var app = express();
 
+// eslint-disable-next-line no-undef
 var PORT = process.env.PORT || 3000;
+// eslint-disable-next-line no-redeclare
 var db = require("./models");
 
 app.use(express.urlencoded({ extended: false }));
