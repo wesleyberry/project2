@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 $(function () {
     $("#login-submit").on("click", function () {
@@ -6,11 +7,11 @@ $(function () {
         var password = $("#pass-login").val().trim();
         var role = $("input[name='role-signup']:checked").val();
         
-        var loginBody = {
-            username: username,
-            password: password,
-            role: role
-        };
+        // var loginBody = {
+        //     username: username,
+        //     password: password,
+        //     role: role
+        // };
 
         if (!username || !password || !role) {
             alert("Please fill out every field");
@@ -20,10 +21,16 @@ $(function () {
             $("#username-login").val("");
             $("#pass-login").val("");
 
-            $.ajax("/api/login", {
-                data: loginBody
-            }).then(function () {
-                // window.location.replace(response);
+            $.post("/api/login", {
+                // data: loginBody
+                username: username,
+                password: password,
+                role: role
+            }).then(function (response) {
+                // window.location.replace(response.url);
+                console.log(response.id);
+                console.log(response.url);
+                console.log(response.role);
             }).catch(function (err) {
                 // eslint-disable-next-line no-console
                 console.log(err);
