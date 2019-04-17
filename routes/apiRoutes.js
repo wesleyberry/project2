@@ -32,7 +32,7 @@ module.exports = function (app) {
     console.log(req.body.username);
     console.log(req.body.password);
     console.log(req.body.role);
-    if (req.body.role == "artist") {
+    if (req.body.role == "Artist") {
       db.User.create({
         name: req.body.username,
         password: req.body.password,
