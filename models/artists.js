@@ -2,8 +2,9 @@ module.exports = function( sequelize, DataTypes ) {
     var Artist = sequelize.define("Artist", {
         id: {
             type: DataTypes.INTEGER,
-            primaryKey: true,
+            primaryKey: true
         },
+<<<<<<< HEAD
         name: DataTypes.STRING,
         genre: DataTypes.STRING,
         instrumentation: DataTypes.STRING,
@@ -12,6 +13,16 @@ module.exports = function( sequelize, DataTypes ) {
         email: DataTypes.STRING,
         phone: DataTypes.STRING,
         profileImage: DataTypes.STRING
+=======
+        artistName: DataTypes.STRING,
+        genre: DataTypes.STRING,
+        instrumentation: DataTypes.STRING,
+        numberOfMembers: DataTypes.INTEGER,
+        email: DataTypes.STRING,
+        phone: DataTypes.STRING,
+        profileImage: DataTypes.STRING,
+        website: DataTypes.STRING
+>>>>>>> master
     });
 
     // Artist Table

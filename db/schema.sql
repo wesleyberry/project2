@@ -1,5 +1,8 @@
 /*### Schema
 
+
+
+
 DROP DATABASE IF EXISTS exampledb;
 CREATE DATABASE exampledb;
 
@@ -39,20 +42,14 @@ CREATE TABLE gigs
   FOREIGN KEY (venue_id) REFERENCES venues(id),
   FOREIGN KEY (artist_id) REFERENCES artists(id)
 );
-*/
 
-
-CREATE TABLE Artists
-(
-  id int NOT NULL,
-  artistName VARCHAR(100) NOT NULL,
-  genre VARCHAR(100) NOT NULL,
-  instrumentation VARCHAR(100) NOT NULL,
-  numberOfMembers int NOT NULL,
-  website VARCHAR(100),
-  email VARCHAR(100),
-  phone VARCHAR(20),
-  profileImage VARCHAR(100),
-  PRIMARY KEY (id)
+CREATE TABLE users (
+id INTEGER AUTO_INCREMENT,
+name VARCHAR(100) NOT NULL,
+password VARCHAR(100) NOT NULL,
+role VARCHAR(100) NOT NULL,
+PRIMARY KEY(id)
 );
 
+
+*/

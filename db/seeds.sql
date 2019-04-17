@@ -70,3 +70,7 @@ SELECT gigs.artist_id, venues.name, gigs.date
 FROM gigs
 LEFT OUTER JOIN venues ON gigs.venue_id = venues.id
 WHERE venues.name = "B.D. Riley's Irish Pub";
+
+
+INSERT INTO Users (name, password, role)
+VALUES ("Eric", "hello123", "Artist" ), ("Ken", "hello123", "Artist" ), ("Wes", "Hello$123", "Artist" );
