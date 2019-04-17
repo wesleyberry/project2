@@ -18,12 +18,12 @@ $(function () {
         } else {
 
             // clear form
-            $("#username-login").val("");
-            $("#pass-login").val("");
+            // $("#username-login").val("");
+            // $("#pass-login").val("");
 
             $.post("/api/login", {
                 // data: loginBody
-                username: username,
+                name: username,
                 password: password,
                 role: role
             }).then(function (response) {

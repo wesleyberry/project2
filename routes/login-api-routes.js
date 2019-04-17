@@ -18,8 +18,10 @@ module.exports = function(app) {
     app.post("/api/login", function(req, res) {
         console.log(req.body.role);
         if (req.body.role === "Artist") {
+            console.log("redirecting to artist");
             res.redirect(307, "/api/loginArtistAfter")
         } else if (req.body.role === "Venue") {
+            console.log("redirecting to venue");
             res.redirect(307, "/api/loginVenueAfter");
         }
     });
