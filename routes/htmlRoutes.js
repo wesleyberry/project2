@@ -10,7 +10,8 @@ module.exports = function (app) {
   //   }
   //   res.sendFile(path.join(__dirname, "../public/signup.html"));
   // });
-  app.get("/", isAuthenticated, function(req, res) {
+  
+  app.get("/", function(req, res) {
     // eslint-disable-next-line no-undef
     res.sendFile(path.join(__dirname, "../public/html/landing.html"));
   });
@@ -29,6 +30,7 @@ module.exports = function (app) {
   });
 
   app.get("/bandSign", isAuthenticated, function (req, res) {
+    // console.log(req.user);
     // eslint-disable-next-line no-undef
     res.sendFile(path.join(__dirname, "../public/html/bandCreateProfile.html"));
   });

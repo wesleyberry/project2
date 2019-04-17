@@ -1,7 +1,4 @@
 var db = require("../models");
-// eslint-disable-next-line no-undef
-// var express = require("express");
-// var app = express();
 
 module.exports = function(app) {
 // Get route for retrieving a single post
@@ -34,9 +31,9 @@ app.get("/api/artists/", function (req, res) {
     });
 });
 
-app.post("/api/artists", function(req, res) {
-  db.Artist.create(req.body).then(function(dbArtist) {
-    res.json(dbArtist);
-  });
-});
+// app.post("/api/artists", function(req, res) {
+//   db.Artist.create(req.body).then(function(dbArtist) {
+//     res.json(dbArtist);
+//   });
+// });
 }
