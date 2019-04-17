@@ -67,6 +67,26 @@ INSERT INTO Artists (artistName, genre, instrumentation, numberOfMembers, email,
 INSERT INTO Users (name, password, role)
 VALUES ("Eric", "hello123", "Artist" ), ("Ken", "hello123", "Artist" ), ("Wes", "Hello$123", "Artist" ),("HoleinTheWall", "2314123","Venue"), ("TheBackRoom", "123", "Venue"),( "Sholzs", "123", "Venue"), ("TheWHO", "123", "Artist");
 
+
+
+
+INSERT INTO Gigs (gigName, street_address, city, state, zipcode, phone, discription, profileImage, date) 
+            VALUES ( "Hole in the Wall",
+                     "2538 Guadalupe St.", "Austin", "TX", "78705", 
+                     "(555) 555-5555", 
+                     "Electric Boogaloo",
+                     "https://via.placeholder.com/300X150",
+                     "Friday Night"),
+                    
+                    ( "Emo's",
+                     "2015 E Riverside Dr.", "Austin", "TX", "78741", 
+                     "(555) 555-5566",
+                     "Aquatic Boogaloo",
+                     "https://via.placeholder.com/300X150",
+                     "Saturday Night");
+
+
+
 INSERT INTO gigs   ( VenueId, ArtistId, date )
             VALUES ( 1, 2, '2019-04-19 20:00:00' );
 INSERT INTO gigs   ( VenueId, ArtistId, date )
