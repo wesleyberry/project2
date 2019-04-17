@@ -11,15 +11,15 @@ $(function () {
         var website = $("#artist-website").val().trim();
         var phone = $("#artist-phone").val().trim();
         var profileImg = $("#profile-img").val().trim();
-        var artistProfile = {
-            genre: genre,
-            instruments: instruments,
-            memberNum: memberNum,
-            email: email,
-            website: website,
-            phone: phone,
-            profileImg: profileImg
-        };
+        // var artistProfile = {
+        //     genre: genre,
+        //     instruments: instruments,
+        //     memberNum: memberNum,
+        //     email: email,
+        //     website: website,
+        //     phone: phone,
+        //     profileImg: profileImg
+        // };
        
         if (!genre || !instruments || !website || !phone || !memberNum || !email) {
             alert("Please fill out every field");
