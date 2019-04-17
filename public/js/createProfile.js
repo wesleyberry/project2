@@ -89,9 +89,14 @@ $(function () {
             $("#venue-website").val("");
 
             // POST
-            $.ajax("/api/venues", {
-                type: "POST",
-                data: venueProfile
+            $.post("/api/venues", {
+                address: address,
+                city: city,
+                state: state,
+                zip: zip,
+                venueEmail: venueEmail,
+                phone: phone,
+                website: website
             // eslint-disable-next-line no-unused-vars
             }).then(function (response) {
                 // window.location.replace(response);
