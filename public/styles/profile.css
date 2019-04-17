@@ -104,8 +104,9 @@ body {
 }
 
 .image {
+    object-fit: cover;
     width: 100%;
-    /* clip-path: inset(50px 10px); */
+    height: 150px;
 }
 
 .placeholder {
