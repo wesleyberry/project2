@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 var db = require("../models");
 var express    = require('express');
 var bodyParser = require('body-parser');
