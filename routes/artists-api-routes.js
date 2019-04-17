@@ -29,7 +29,7 @@ app.get("/api/artists/", function (req, res) {
     db.Artist.findAll({
 
     }).then(function (dbArtist) {
-        console.log(dbArtist);
+       
         res.json(dbArtist);
         // res.send(dbArtist);
        
