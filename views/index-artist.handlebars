@@ -3,7 +3,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-body">
-        <!-- INSERT VENUE PROFILE CODE HERE!! -->
+        INSERT VENUE PROFILE CODE HERE!!
       </div>
     </div>
   </div>
@@ -12,17 +12,18 @@
 <!-- PROFILE -->
 <div class="profile">
   <div class="profile-picture">
-    <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="profile-image">
+    <img class="image" src={{artist.profileImage}} alt="profile-image">
   </div>
   <div class="profile-content">
-    <h1 class="band-name"></h1>
+    <h1 class="band-name">{{artist.artistName}}</h1>
     <p class="band-subname"></p>
-    <p class="band-genres"></p>
+    <p class="band-genres">{{artist.genre}}</p>
     <div class="contact">
-      <p></p>
-      <p></p>
+      <p>{{artist.email}}</p>
+      <p>{{artist.website}}</p>
+      <p>{{artist.phone}}</p>
     </div>
-    <button class="btn btn-primary btn-lg gig-view"></button>
+    <button class="btn btn-primary btn-lg gig-view">Profile?</button>
   </div>
 </div>
 
@@ -36,37 +37,36 @@
   </form>
 
   <div id="card-display">
-
+    {{#each gig}}
     <div class="gig-card" data-toggle="modal" data-target="#form-modal">
-      <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="venue-image">
+      <img class="image" src={{this.profileImage}} alt="venue-image">
       <div class="card-text">
-        <div class="card-title"></div>
-        <p class="card-desc"></p>
+        <div class="card-title">{{this.gigName}}</div>
+        <p class="card-desc">{{this.discription}}</p>
         <hr>
-        <div class="tags"></div>
+        <div class="tags">{{this.date}}</div>
       </div>
     </div>
-
-    <div class="venue-card placeholder">
+    {{!-- <div class="venue-card placeholder">
       <!-- THIS IS USED TO KEEP THE LAST ROW OF CARDS LEFT JUSTIFIED
                 IF THERE ARE ONLY TWO CARDS IN THE LAST ROW!! -->
-    </div>
-
+    </div> --}}
+    {{/each}}
   </div>
 
 </div>
 
-<div id="container-left">
-  <ul>
-    {{#each}}
-    {{!-- {{#unless}} --}}
-    <li>
-      <p class="devour" data-id="{{this.id}}">{{this.potion_name}}</p>
-    </li>
-    {{!-- {{/unless}} --}}
-    {{/each}}
-  </ul>
-</div>
+
+{{!-- <ul>
+  {{#each gig}}
+  {{#unless}}
+  <li>
+    <p>{{this.gigName}}</p>
+  </li>
+  {{/unless}}
+  {{/each}}
+</ul> --}}
+
 
 {{!-- <div id="home">
   <div class="container">
