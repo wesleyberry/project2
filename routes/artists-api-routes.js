@@ -30,9 +30,9 @@ app.get("/api/artists/:id/", function (req, res) {
     });
 });
 
-app.post("/api/artists", function(req, res) {
-  db.Artist.create(req.body).then(function(dbArtist) {
-    res.json(dbArtist);
-  });
-});
+// app.post("/api/artists", function(req, res) {
+//   db.Artist.create(req.body).then(function(dbArtist) {
+//     res.json(dbArtist);
+//   });
+// });
 }

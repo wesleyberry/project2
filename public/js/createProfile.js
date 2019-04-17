@@ -11,7 +11,6 @@ $(function () {
         var website = $("#artist-website").val().trim();
         var phone = $("#artist-phone").val().trim();
         var profileImg = $("#profile-img").val().trim();
-        
         var artistProfile = {
             genre: genre,
             instruments: instruments,
@@ -33,11 +32,16 @@ $(function () {
             $("#artist-website").val("");
             $("#artist-phone").val("");
             $("#profile-img").val("");
-
             // POST
-            $.ajax("/api/artists", {
-                type: "POST",
-                data: artistProfile            
+            $.post("/api/artists", {
+                // data: artistProfile   
+                genre: genre,
+                instruments: instruments,
+                memberNum: memberNum,
+                email: email,
+                website: website,
+                phone: phone,
+                profileImg: profileImg         
                 // eslint-disable-next-line no-unused-vars
             }).then(function (response) {
                 // window.location.replace(response);

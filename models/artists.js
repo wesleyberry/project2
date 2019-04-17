@@ -2,10 +2,11 @@ module.exports = function( sequelize, DataTypes ) {
     var Artist = sequelize.define("Artist", {
         id: {
             type: DataTypes.INTEGER,
+            defaultValue: DataTypes.UUIDV1,
             primaryKey: true
         },
-        artistName: DataTypes.STRING,
-        genre: DataTypes.STRING,
+        name: DataTypes.STRING,
+        music_genre: DataTypes.STRING,
         instrumentation: DataTypes.STRING,
         numberOfMembers: DataTypes.INTEGER,
         email: DataTypes.STRING,
