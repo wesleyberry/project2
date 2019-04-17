@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 html,
 body {
     font-family: 'Lato', sans-serif;
@@ -5,6 +9,8 @@ body {
     background-color: #232426;
     height: 100%;
 }
+
+/* -----------------PROFILE----------------- */
 
 .profile {
     position: fixed;
@@ -30,6 +36,7 @@ body {
 }
 
 .band-subname {
+    font-size: 18px;
     font-style: italic;
 }
 
@@ -43,11 +50,29 @@ body {
     margin-top: 40px;
 }
 
+.gig-view {
+    display: block;
+    bottom: 0;
+    margin: auto;
+    margin-top: 30px;
+    color: #ffffff;
+    background: #af4ca3;
+    border: none;
+    width: 180px;
+}
+
+/* -----------------CARD DIPSLAY----------------- */
+
 #feed {
     margin: auto;
     margin-left: 350px;
-    padding: 50px;
+    padding: 40px;
     height: 100%;
+    overflow: hidden;
+}
+
+#calendar {
+    /* display: block; */
 }
 
 #search {
@@ -57,20 +82,33 @@ body {
 
 #card-display {
     margin-top: 20px;
-    overflow: auto;
     height: 100%;
     padding-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: auto;
+}
+
+#card-display::-webkit-scrollbar {
+    width: 0 !important;
+    overflow: -moz-scrollbars-none;
+    -ms-overflow-style: none;
 }
 
 .venue-card {
+    flex: 0 1 32%;
     background: #ffffff;
-    color: #000;
-    border: solid 10px #232426;
     border-radius: 10px;
-    float: left;
-    width: 33.3%;
-    height: 350px;
-    overflow: auto;
+    color: #000;
+    margin-bottom: 20px;
+    position: relative;
+    box-shadow: 1px 1px 5px #111;
+    cursor: pointer;
+}
+
+.placeholder {
+    visibility: hidden;
 }
 
 .card-text {
@@ -79,18 +117,53 @@ body {
 
 .card-title {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 .tags {
+    color: #af4ca3;
+    position: absolute;
+    margin-bottom: 10px;
+    bottom: 0;
     font-size: 14px;
     font-style: italic;
+}
+
+/* -----------------MODAL----------------- */
+
+.modal-dialog {
+    max-width: 400px;
+}
+
+.modal-body {
+    padding: 0;
+    background-color: #232426;
+}
+
+/* -----------------RESPONSIVENESS----------------- */
+
+@media screen and (max-width: 1300px) {
+
+    .venue-card {
+        flex: 0 1 49%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+
+    .venue-card {
+        flex: 0 1 100%;
+    }
 }
 
 @media screen and (max-width: 640px) {
 
     .profile {
         display: none;
+    }
+
+    #feed {
+        margin-left: 0px;
     }
 
 }
