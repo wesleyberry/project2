@@ -85,8 +85,6 @@ INSERT INTO Gigs (gigName, street_address, city, state, zipcode, phone, discript
                      "https://via.placeholder.com/300X150",
                      "Saturday Night");
 
-
-
 INSERT INTO gigs   ( VenueId, ArtistId, date )
             VALUES ( 1, 2, '2019-04-19 20:00:00' );
 INSERT INTO gigs   ( VenueId, ArtistId, date )
