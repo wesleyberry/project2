@@ -19,7 +19,8 @@ module.exports = function (app) {
             email: req.body.email,
             phone: req.body.phone,
             profileImage: req.body.profileImg,
-            website: req.body.website
+            website: req.body.website,
+            UserId: req.user.id
         }).then(function() {
             res.send("band");
         }).catch(function(err) {
