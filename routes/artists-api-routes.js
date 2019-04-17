@@ -15,7 +15,6 @@ module.exports = function (app) {
                         gig: dbGig
                     }
                     // console.log(dbArtist);
-                    // res.json({artist: dbArtist, gig: dbGig })
                     res.render("index-artist", hbObject);
                 });
             });
