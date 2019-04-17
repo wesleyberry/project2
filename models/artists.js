@@ -1,11 +1,6 @@
 module.exports = function( sequelize, DataTypes ) {
     var Artist = sequelize.define("Artist", {
-        id: {
-            type: DataTypes.INTEGER,
-            defaultValue: DataTypes.UUIDV1,
-            primaryKey: true
-        },
-        name: DataTypes.STRING,
+        artistName: DataTypes.STRING,
         genre: DataTypes.STRING,
         instrumentation: DataTypes.STRING,
         numberOfMembers: DataTypes.INTEGER,
@@ -15,9 +10,12 @@ module.exports = function( sequelize, DataTypes ) {
         website: DataTypes.STRING
     });
 
-    // Artist Table
+    // // Artist Table
     Artist.associate = function( models ) {
-        models.Artist.belongsToMany( models.Venue, { through: models.Gig })
+        models.Artist.belongsTo(models.User);
+        models.Artist.hasMany(models.Gig, {
+            onDelete: "cascade"
+          });
     };
 
     return Artist;
