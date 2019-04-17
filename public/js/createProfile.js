@@ -65,15 +65,15 @@ $(function () {
         var phone = $("#venue-phone-num").val().trim();
         var website = $("#venue-website").val().trim();
 
-        var venueProfile = {
-            address: address,
-            city: city,
-            state: state,
-            zip: zip,
-            venueEmail: venueEmail,
-            phone: phone,
-            website: website
-        };
+        // var venueProfile = {
+        //     address: address,
+        //     city: city,
+        //     state: state,
+        //     zip: zip,
+        //     venueEmail: venueEmail,
+        //     phone: phone,
+        //     website: website
+        // };
         
         if (!address || !city || !state || !zip || !venueEmail || !phone || !website) {
             alert("Please fill out every field");
@@ -89,9 +89,14 @@ $(function () {
             $("#venue-website").val("");
 
             // POST
-            $.ajax("/api/venues", {
-                type: "POST",
-                data: venueProfile
+            $.post("/api/venues", {
+                address: address,
+                city: city,
+                state: state,
+                zip: zip,
+                venueEmail: venueEmail,
+                phone: phone,
+                website: website
             // eslint-disable-next-line no-unused-vars
             }).then(function (response) {
                 // window.location.replace(response);
