@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 var db = require("../models");
+var path = require("path");
 var passport = require("../config/passport");
 var express    = require('express');
 var bodyParser = require('body-parser');
@@ -14,14 +15,14 @@ module.exports = function (app) {
 
     app.post("/api/loginArtist", passport.authenticate("local"), function (req, res) {
       // eslint-disable-next-line no-console
-      // console.log("Test after Artist authentication: " + req.user);
       res.json("/bandSign");
+      // res.sendFile(path.join(__dirname, "../public/html/venueCreateProfile.html"));
     });
 
     app.post("/api/loginVenue", passport.authenticate("local"), function (req, res) {
       // eslint-disable-next-line no-console
-      // console.log("Test after Venue uthentication: " + req.user);
       res.json("/venueSign");
+      // res.sendFile(path.join(__dirname, "../public/html/bandCreateProfile.html"));
     });
 
   app.post("/api/signup", function (req, res) {

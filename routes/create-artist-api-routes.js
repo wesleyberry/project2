@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 module.exports = function (app) {
 
     app.post("/api/artists", function(req, res) {
+        console.log(req.body);
         db.Artist.create({
             genre: req.body.genre,
             instrumentation: req.body.instruments,

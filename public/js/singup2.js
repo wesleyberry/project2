@@ -33,6 +33,7 @@ $(function () {
                 password: pass,
                 role: role
             }).then(function (data) {
+                // console.log(data);
                 window.location.replace(data);
                 // eslint-disable-next-line no-console
                 // console.log("Signup.js test: Data returned to client for registration.");

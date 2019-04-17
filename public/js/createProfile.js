@@ -44,7 +44,7 @@ $(function () {
                 profileImg: profileImg         
                 // eslint-disable-next-line no-unused-vars
             }).then(function (response) {
-                // window.location.replace(response);
+                window.location.replace(response);
             }).catch(function (err) {
                 // eslint-disable-next-line no-console
                 console.log(err);
@@ -99,7 +99,7 @@ $(function () {
                 website: website
             // eslint-disable-next-line no-unused-vars
             }).then(function (response) {
-                // window.location.replace(response);
+                window.location.replace(response);
             }).catch(function (err) {
                 // eslint-disable-next-line no-console
                 console.log(err);
