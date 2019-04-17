@@ -16,6 +16,7 @@ module.exports = function (app) {
 
     app.post("/api/loginArtist", passport.authenticate("local"), function (req, res) {
       // eslint-disable-next-line no-console
+      console.log("Before sending JSON");
       res.json("/bandSign");
       // res.sendFile(path.join(__dirname, "../public/html/venueCreateProfile.html"));
     });
@@ -32,7 +33,7 @@ module.exports = function (app) {
     console.log(req.body.username);
     console.log(req.body.password);
     console.log(req.body.role);
-    if (req.body.role == "Artist") {
+    if (req.body.role == "artist") {
       db.User.create({
         name: req.body.username,
         password: req.body.password,
