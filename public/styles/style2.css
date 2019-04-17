@@ -10,6 +10,7 @@ h1{
     padding-top: 15px;
 }
 
+#gig-create,
 #venue-create,
 #artist-create {
     background-color: #af4ca3;
