@@ -65,15 +65,15 @@ $(function () {
         var phone = $("#venue-phone-num").val().trim();
         var website = $("#venue-website").val().trim();
 
-        var venueProfile = {
-            address: address,
-            city: city,
-            state: state,
-            zip: zip,
-            venueEmail: venueEmail,
-            phone: phone,
-            website: website
-        };
+        // var venueProfile = {
+        //     address: address,
+        //     city: city,
+        //     state: state,
+        //     zip: zip,
+        //     venueEmail: venueEmail,
+        //     phone: phone,
+        //     website: website
+        // };
         
         if (!address || !city || !state || !zip || !venueEmail || !phone || !website) {
             alert("Please fill out every field");
