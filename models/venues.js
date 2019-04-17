@@ -2,7 +2,8 @@ module.exports = function( sequelize, DataTypes ) {
     var Venue = sequelize.define("Venue", {
         id: {
             type: DataTypes.INTEGER,
-            primaryKey: true,
+            defaultValue: DataTypes.UUIDV1,
+            primaryKey: true
         },
         venueName: DataTypes.STRING,
         street_address: DataTypes.STRING,

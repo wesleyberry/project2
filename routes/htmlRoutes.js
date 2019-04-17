@@ -30,6 +30,7 @@ module.exports = function (app) {
   });
 
   app.get("/bandSign", isAuthenticated, function (req, res) {
+    // console.log(req.user);
     // eslint-disable-next-line no-undef
     res.sendFile(path.join(__dirname, "../public/html/bandCreateProfile.html"));
   });

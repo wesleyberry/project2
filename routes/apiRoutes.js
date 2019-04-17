@@ -14,12 +14,13 @@ module.exports = function (app) {
 
     app.post("/api/loginArtist", passport.authenticate("local"), function (req, res) {
       // eslint-disable-next-line no-console
-      console.log("Test after Artist authentication: " + req.user);
+      // console.log("Test after Artist authentication: " + req.user);
       res.json("/bandSign");
     });
+
     app.post("/api/loginVenue", passport.authenticate("local"), function (req, res) {
       // eslint-disable-next-line no-console
-      console.log("Test after Venue uthentication: " + req.user);
+      // console.log("Test after Venue uthentication: " + req.user);
       res.json("/venueSign");
     });
 
@@ -29,7 +30,7 @@ module.exports = function (app) {
     console.log(req.body.username);
     console.log(req.body.password);
     console.log(req.body.role);
-    if (req.body.role === "artist") {
+    if (req.body.role == "artist") {
       db.User.create({
         name: req.body.username,
         password: req.body.password,
@@ -42,7 +43,7 @@ module.exports = function (app) {
         console.log(err);
         res.json(err);
       });
-    } else if (req.body.role === "venue") {
+    } else {
       db.User.create({
         name: req.body.username,
         password: req.body.password,
@@ -64,7 +65,7 @@ module.exports = function (app) {
 
     app.get("/api/user_data", function (req, res) {
       if (!req.user) {
-        res.json("/");
+        res.json({});
       } else {
         res.json({
           // Include in here everything we want to return to the user
