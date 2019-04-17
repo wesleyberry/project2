@@ -29,19 +29,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-body">
-                    <div class="profile-picture">
-                        <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="profile-image">
-                    </div>
-                    <div class="profile-content">
-                        <h1 class="band-name">Chaz Waters</h1>
-                        <p class="band-subname">and the Sunday Blues Band</p>
-                        <p class="band-genres">Blues, Funk</p>
-                        <div class="contact">
-                            <p>https://soundcloud.com/chazwatersband</p>
-                            <p>chazwatersband@email.com</p>
-                        </div>
-                        <button class="btn btn-primary btn-lg gig-view">Book</button>
-                    </div>
+                    <!-- INSERT VENUE PROFILE CODE HERE!! -->
                 </div>
             </div>
         </div>
@@ -67,25 +55,6 @@
     <!-- FEED -->
     <div id="feed">
 
-        <form id="calendar" method="post">
-            <div class="form-group ">
-                <div class="input-group">
-                    <div class="input-group-addon">
-                        <i class="fa fa-calendar">
-                        </i>
-                    </div>
-                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text" />
-                </div>
-            </div>
-            <div class="form-group">
-                <div>
-                    <!-- <button class="btn btn-primary " name="submit" type="submit">
-                        Submit
-                    </button> -->
-                </div>
-            </div>
-        </form>
-
         <form id="search">
             <div class="form-group">
                 <input type="search" class="form-control" id="search-bar" placeholder="Search">
@@ -94,7 +63,17 @@
 
         <div id="card-display">
 
-            <div class="venue-card" data-toggle="modal" data-target="#form-modal">
+            <div class="gig-card" data-toggle="modal" data-target="#form-modal">
+                <img class="image" src="https://images.unsplash.com/photo-1521337581100-8ca9a73a5f79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1570&q=80" alt="venue-image">
+                <div class="card-text">
+                    <div class="card-title">Royal Underground</div>
+                    <p>English themed dive bar in the heart of downtown Austin, TX.</p>
+                    <hr>
+                    <div class="tags">Bar, Indoors, Rock-n-Roll</div>
+                </div>
+            </div>
+
+            <div class="gig-card" data-toggle="modal" data-target="#form-modal">
                 <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="venue-image">
                 <div class="card-text">
                     <div class="card-title">Royal Underground</div>
@@ -104,7 +83,7 @@
                 </div>
             </div>
 
-            <div class="venue-card" data-toggle="modal" data-target="#form-modal">
+            <div class="gig-card" data-toggle="modal" data-target="#form-modal">
                 <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="venue-image">
                 <div class="card-text">
                     <div class="card-title">Royal Underground</div>
@@ -114,7 +93,7 @@
                 </div>
             </div>
 
-            <div class="venue-card" data-toggle="modal" data-target="#form-modal">
+            <div class="gig-card" data-toggle="modal" data-target="#form-modal">
                 <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="venue-image">
                 <div class="card-text">
                     <div class="card-title">Royal Underground</div>
@@ -124,7 +103,7 @@
                 </div>
             </div>
 
-            <div class="venue-card" data-toggle="modal" data-target="#form-modal">
+            <div class="gig-card" data-toggle="modal" data-target="#form-modal">
                 <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="venue-image">
                 <div class="card-text">
                     <div class="card-title">Royal Underground</div>
@@ -134,17 +113,7 @@
                 </div>
             </div>
 
-            <div class="venue-card" data-toggle="modal" data-target="#form-modal">
-                <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="venue-image">
-                <div class="card-text">
-                    <div class="card-title">Royal Underground</div>
-                    <p>English themed dive bar in the heart of downtown Austin, TX.</p>
-                    <hr>
-                    <div class="tags">Bar, Indoors, Rock-n-Roll</div>
-                </div>
-            </div>
-
-            <div class="venue-card placeholder">
+            <div class="gig-card placeholder">
                 <!-- THIS IS USED TO KEEP THE LAST ROW OF CARDS LEFT JUSTIFIED
                 IF THERE ARE ONLY TWO CARDS IN THE LAST ROW!! -->
             </div>
@@ -153,18 +122,6 @@
 
     </div>
 
-    <script>
-        $(document).ready(function () {
-            var date_input = $('input[name="date"]'); //our date input has the name "date"
-            var container = $('.bootstrap-iso form').length > 0 ? $('.bootstrap-iso form').parent() : "body";
-            date_input.datepicker({
-                format: 'mm/dd/yyyy',
-                container: container,
-                todayHighlight: true,
-                autoclose: true,
-            })
-        })
-    </script>
 </body>
 
 </html>

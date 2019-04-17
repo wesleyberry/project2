@@ -71,10 +71,6 @@ body {
     overflow: hidden;
 }
 
-#calendar {
-    /* display: block; */
-}
-
 #search {
     margin: auto;
     width: 100%;
@@ -96,7 +92,7 @@ body {
     -ms-overflow-style: none;
 }
 
-.venue-card {
+.gig-card {
     flex: 0 1 32%;
     background: #ffffff;
     border-radius: 10px;
@@ -105,6 +101,11 @@ body {
     position: relative;
     box-shadow: 1px 1px 5px #111;
     cursor: pointer;
+}
+
+.image {
+    width: 100%;
+    /* clip-path: inset(50px 10px); */
 }
 
 .placeholder {
@@ -118,6 +119,10 @@ body {
 .card-title {
     font-size: 24px;
     font-weight: 900;
+}
+
+.card-desc {
+    font-size: 18px;
 }
 
 .tags {

@@ -1,0 +1,105 @@
+<!-- CARD MODAL -->
+<div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <!-- INSERT VENUE PROFILE CODE HERE!! -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE -->
+<div class="profile">
+  <div class="profile-picture">
+    <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="profile-image">
+  </div>
+  <div class="profile-content">
+    <h1 class="band-name"></h1>
+    <p class="band-subname"></p>
+    <p class="band-genres"></p>
+    <div class="contact">
+      <p></p>
+      <p></p>
+    </div>
+    <button class="btn btn-primary btn-lg gig-view"></button>
+  </div>
+</div>
+
+<!-- FEED -->
+<div id="feed">
+
+  <form id="search">
+    <div class="form-group">
+      <input type="search" class="form-control" id="search-bar" placeholder="Search">
+    </div>
+  </form>
+
+  <div id="card-display">
+
+    <div class="gig-card" data-toggle="modal" data-target="#form-modal">
+      <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="venue-image">
+      <div class="card-text">
+        <div class="card-title"></div>
+        <p class="card-desc"></p>
+        <hr>
+        <div class="tags"></div>
+      </div>
+    </div>
+
+    <div class="venue-card placeholder">
+      <!-- THIS IS USED TO KEEP THE LAST ROW OF CARDS LEFT JUSTIFIED
+                IF THERE ARE ONLY TWO CARDS IN THE LAST ROW!! -->
+    </div>
+
+  </div>
+
+</div>
+
+<div id="container-left">
+  <ul>
+    {{#each}}
+    {{!-- {{#unless}} --}}
+    <li>
+      <p class="devour" data-id="{{this.id}}">{{this.potion_name}}</p>
+    </li>
+    {{!-- {{/unless}} --}}
+    {{/each}}
+  </ul>
+</div>
+
+{{!-- <div id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h1>{{msg}}</h1>
+        <h2>This is our Home Page!</h2>
+        <form class="clearfix mb-4" action="POST">
+          <div class="form-group">
+            <label for="example-text">Example Text</label>
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text"
+              placeholder="Enter Example Text">
+          </div>
+          <div class="form-group">
+            <label for="example-description">Example Description</label>
+            <textarea class="form-control" id="example-description" aria-describedby="example-description"
+              placeholder="Enter Example Description"></textarea>
+          </div>
+          <button id="submit" class="btn btn-primary float-right">Submit</button>
+        </form>
+        <h3>Examples:</h3>
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/js/index.js"></script> --}}
