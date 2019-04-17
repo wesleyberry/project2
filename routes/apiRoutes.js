@@ -14,13 +14,13 @@ module.exports = function (app) {
 
     app.post("/api/loginArtist", passport.authenticate("local"), function (req, res) {
       // eslint-disable-next-line no-console
-      console.log("Test after Artist authentication: " + req.user);
+      // console.log("Test after Artist authentication: " + req.user);
       res.json("/bandSign");
     });
 
     app.post("/api/loginVenue", passport.authenticate("local"), function (req, res) {
       // eslint-disable-next-line no-console
-      console.log("Test after Venue uthentication: " + req.user);
+      // console.log("Test after Venue uthentication: " + req.user);
       res.json("/venueSign");
     });
 
@@ -43,7 +43,7 @@ module.exports = function (app) {
         console.log(err);
         res.json(err);
       });
-    } else if (req.body.role == "venue") {
+    } else {
       db.User.create({
         name: req.body.username,
         password: req.body.password,

@@ -6,7 +6,7 @@ module.exports = function( sequelize, DataTypes ) {
             primaryKey: true
         },
         name: DataTypes.STRING,
-        music_genre: DataTypes.STRING,
+        genre: DataTypes.STRING,
         instrumentation: DataTypes.STRING,
         numberOfMembers: DataTypes.INTEGER,
         email: DataTypes.STRING,
