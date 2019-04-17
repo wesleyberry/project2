@@ -36,3 +36,5 @@ app.get("/api/artists/:id/", function (req, res) {
 //   });
 // });
 }
+
+
