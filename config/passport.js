@@ -1,11 +1,12 @@
 var passport = require("passport");
+
 var LocalStrategy = require("passport-local").Strategy;
 
 var db = require("../models");
 
 passport.use(new LocalStrategy(
     {
-      usernameField: "name"
+      passwordField: "password"
     },
     function(name, password, done) {
       db.User.findOne({

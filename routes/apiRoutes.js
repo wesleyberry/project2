@@ -17,13 +17,13 @@ module.exports = function (app) {
     app.post("/api/loginArtist", passport.authenticate("local"), function (req, res) {
       // eslint-disable-next-line no-console
       console.log("Before sending JSON");
-      res.json("/bandSign");
+      res.json("bandSign");
       // res.sendFile(path.join(__dirname, "../public/html/venueCreateProfile.html"));
     });
 
     app.post("/api/loginVenue", passport.authenticate("local"), function (req, res) {
       // eslint-disable-next-line no-console
-      res.json("/venueSign");
+      res.json("venueSign");
       // res.sendFile(path.join(__dirname, "../public/html/bandCreateProfile.html"));
     });
 
@@ -41,6 +41,7 @@ module.exports = function (app) {
       }).then(function () {
         console.log("Create callback: ");
         res.redirect(307, "/api/loginArtist");
+        console.log("test");
       }).catch(function (err) {
         // eslint-disable-next-line no-console
         console.log(err);
