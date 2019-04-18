@@ -30,6 +30,8 @@ $("#gig-create").on("click", function (event) {
     // eslint-disable-next-line no-unused-vars
     }).then(function (response) {
         // window.location.replace(response);
+        console.log(response);
+        location.reload();
     }).catch(function (err) {
         console.log(err);
     });
