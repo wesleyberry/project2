@@ -30,6 +30,25 @@
 <!-- FEED -->
 <div id="feed">
 
+  {{!-- venue filter --}}
+ 
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <button id="filter" class="btn btn-outline-secondary" type="button"><i class="fas fa-camera fa-sm"></i></button>
+    </div>
+    <select class="custom-select" id="inputGroupSelect03">
+      <option selected>Filter by Venue</option>
+      {{#each gig}}
+      <option value="{{this.id}}">{{this.gigName}}</option>
+      {{/each}}
+    </select>
+  </div>
+
+
+  {{!-- venue filter --}}
+
+
   <form id="search">
     <div class="form-group">
       <input type="search" class="form-control" id="search-bar" placeholder="Search">

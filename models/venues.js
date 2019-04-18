@@ -11,17 +11,25 @@ module.exports = function( sequelize, DataTypes ) {
     });
 
 
-    Venue.associate = function(models) {
-        // Associating Venue with Gigs
-        // When an Venue is deleted, also delete any associated Posts
-        Venue.hasMany(models.Gig, {
+    Venue.associate = function( models ) {
+      models.Venue.belongsTo(models.User);
+      models.Venue.hasMany(models.Gig, {
           onDelete: "cascade"
         });
-      };
-    // // Venue Table
-    // Venue.associate = function( models ) {
-    //     models.Venue.belongsToMany( models.Artist, { through: models.Gig })
-    // };
+  };
+
+    // Venue.associate = function(models) {
+    //     // Associating Venue with Gigs
+    //     // When an Venue is deleted, also delete any associated Posts
+        
+    //     Venue.hasMany(models.Gig, {
+    //       onDelete: "cascade"
+    //     });
+    //   };
+    // // // Venue Table
+    // // Venue.associate = function( models ) {
+    // //     models.Venue.belongsToMany( models.Artist, { through: models.Gig })
+    // // };
 
     return Venue;
 };
