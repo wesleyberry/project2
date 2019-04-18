@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 var db = require("../models");
 
 module.exports = function (app) {
@@ -22,6 +23,16 @@ module.exports = function (app) {
             })
         });
     });
+
+    app.delete("/api/gigs/:id", function(req, res) {
+        console.log(req.params.id);
+        var id = req.params.id;
+        db.Gig.destroy({
+            where: {
+                id: id
+            }
+        }).then(function() {
+            res.send(200);
+        });
+    });
 }
-
-
