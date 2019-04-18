@@ -23,7 +23,7 @@ module.exports = function (app) {
             website: req.body.website,
             UserId: req.user.id
         }).then(function() {
-            res.send("band");
+            res.send(200);
         }).catch(function(err) {
             console.log(err);
             res.json(err);

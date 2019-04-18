@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Artist Profile</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../styles/profile.css">
+
+</head>
+
+<body>
+
+    <!-- CARD MODAL -->
+    <div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <!-- INSERT VENUE PROFILE CODE HERE!! -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="profile">
+        <div class="profile-picture">
+            <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="profile-image">
+        </div>
+        <div class="profile-content">
+            <h1 class="band-name">Chaz Waters</h1>
+            <p class="band-subname">and the Sunday Blues Band</p>
+            <p class="band-genres">Blues, Funk</p>
+            <div class="contact">
+                <p>https://soundcloud.com/chazwatersband</p>
+                <p>chazwatersband@email.com</p>
+            </div>
+            <button class="btn btn-primary btn-lg gig-view">Gig View</button>
+        </div>
+    </div>
+
+    <!-- FEED -->
+    <div id="feed">
+
+        <form id="search">
+            <div class="form-group">
+                <input type="search" class="form-control" id="search-bar" placeholder="Search">
+            </div>
+        </form>
+
+        <div id="card-display">
+
+            <div class="gig-card" data-toggle="modal" data-target="#form-modal">
+                <img class="image" src="https://images.unsplash.com/photo-1499364615650-ec38552f4f34?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1566&q=80" alt="venue-image">
+                <div class="card-text">
+                    <div class="card-title">Royal Underground</div>
+                    <p>English themed dive bar in the heart of downtown Austin, TX.</p>
+                    <hr>
+                    <div class="tags">Bar, Indoors, Rock-n-Roll</div>
+                </div>
+            </div>
+
+            <div class="gig-card" data-toggle="modal" data-target="#form-modal">
+                <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="venue-image">
+                <div class="card-text">
+                    <div class="card-title">Royal Underground</div>
+                    <p>English themed dive bar in the heart of downtown Austin, TX.</p>
+                    <hr>
+                    <div class="tags">Bar, Indoors, Rock-n-Roll</div>
+                </div>
+            </div>
+
+            <div class="gig-card" data-toggle="modal" data-target="#form-modal">
+                <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="venue-image">
+                <div class="card-text">
+                    <div class="card-title">Royal Underground</div>
+                    <p>English themed dive bar in the heart of downtown Austin, TX.</p>
+                    <hr>
+                    <div class="tags">Bar, Indoors, Rock-n-Roll</div>
+                </div>
+            </div>
+
+            <div class="gig-card" data-toggle="modal" data-target="#form-modal">
+                <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="venue-image">
+                <div class="card-text">
+                    <div class="card-title">Royal Underground</div>
+                    <p>English themed dive bar in the heart of downtown Austin, TX.</p>
+                    <hr>
+                    <div class="tags">Bar, Indoors, Rock-n-Roll</div>
+                </div>
+            </div>
+
+            <div class="gig-card" data-toggle="modal" data-target="#form-modal">
+                <img class="card-img-top" src="https://via.placeholder.com/300X150" alt="venue-image">
+                <div class="card-text">
+                    <div class="card-title">Royal Underground</div>
+                    <p>English themed dive bar in the heart of downtown Austin, TX.</p>
+                    <hr>
+                    <div class="tags">Bar, Indoors, Rock-n-Roll</div>
+                </div>
+            </div>
+
+            <div class="gig-card placeholder">
+                <!-- THIS IS USED TO KEEP THE LAST ROW OF CARDS LEFT JUSTIFIED
+                IF THERE ARE ONLY TWO CARDS IN THE LAST ROW!! -->
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

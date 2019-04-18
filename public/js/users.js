@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 $(document).ready(function() {
-    $.get("/api/artist/id").then(function() {
-        // $(".some-class").text(data);
+    $.get("/api/user_data").then(function(data) {
+        console.log(data);
     });
 });
