@@ -5,10 +5,10 @@ var db = require("../models");
 
 passport.use(new LocalStrategy(
     {
-      usernameField: "name"
+      usernameField: "name",
+      passwordField: "password"
     },
     function(name, password, done) {
-      // console.log("are we looking for something")
       db.User.findOne({
         where: {
           name: name
