@@ -10,7 +10,7 @@ body {
     height: 100%;
 }
 
-/* -----------------PROFILE----------------- */
+/* -----------------PROFILE GLOBAL----------------- */
 
 .profile {
     position: fixed;
@@ -21,6 +21,8 @@ body {
     width: 350px;
     height: 100%;
 }
+
+/* -----------------PROFILE ARTIST----------------- */
 
 .profile-picture {
     position: relative;
@@ -61,7 +63,7 @@ body {
     width: 180px;
 }
 
-/* -----------------CARD DIPSLAY----------------- */
+/* -----------------GIG DIPSLAY----------------- */
 
 #feed {
     margin: auto;
@@ -156,6 +158,22 @@ body {
     background-color: #232426;
 }
 
+/* -----------------ALL FORMS----------------- */
+
+.create-profile-heading {
+    text-align: center;
+    padding-top: 15px;
+}
+#gig-create,
+#venue-create,
+#artist-create {
+    background-color: #af4ca3;
+}
+#venue-create
+#artist-create {
+    margin-bottom: 20px;
+}
+
 /* -----------------RESPONSIVENESS----------------- */
 
 @media screen and (max-width: 1300px) {
@@ -183,12 +201,6 @@ body {
     }
 
 }
-
-/* .card {
-    float: left;
-    margin: 20px;
-} */
-
 
 
 /* FONT BANK 
