@@ -3,7 +3,7 @@
 $(function () {
     $("#login-submit").on("click", function () {
         event.preventDefault();
-        var username = $("#username-login").val().trim();
+        var name = $("#username-login").val().trim();
         var password = $("#pass-login").val().trim();
         var role = $("input[name='role-signup']:checked").val();
         
@@ -13,7 +13,7 @@ $(function () {
         //     role: role
         // };
 
-        if (!username || !password || !role) {
+        if (!name || !password || !role) {
             alert("Please fill out every field");
         } else {
 
@@ -23,11 +23,11 @@ $(function () {
 
             $.post("/api/login", {
                 // data: loginBody
-                name: username,
+                name: name,
                 password: password,
                 role: role
             }).then(function (response) {
-                // window.location.replace(response.url);
+                window.location.replace(response.url);
                 console.log(response.id);
                 console.log(response.url);
                 console.log(response.role);

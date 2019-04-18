@@ -12,7 +12,8 @@ module.exports = function (app) {
                 }).then(function (dbArtist) {
                     var hbObject = {
                         artist: dbArtist,
-                        gig: dbGig
+                        gig: dbGig,
+
                     }
                     // console.log(dbArtist);
                     res.render("index-artist", hbObject);

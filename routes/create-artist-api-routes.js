@@ -12,6 +12,7 @@ app.use(bodyParser.json());
 module.exports = function (app) {
 
     app.post("/api/artists", function(req, res) {
+        console.log(req.body);
         db.Artist.create({
             genre: req.body.genre,
             instrumentation: req.body.instruments,
@@ -22,7 +23,7 @@ module.exports = function (app) {
             website: req.body.website,
             UserId: req.user.id
         }).then(function() {
-            res.send("band");
+            res.json({url:"api/artists"});
         }).catch(function(err) {
             console.log(err);
             res.json(err);

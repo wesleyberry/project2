@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 /* eslint-disable no-undef */
 $(function () {
 // create artist profile
@@ -11,15 +12,6 @@ $(function () {
         var website = $("#artist-website").val().trim();
         var phone = $("#artist-phone").val().trim();
         var profileImg = $("#profile-img").val().trim();
-        // var artistProfile = {
-        //     genre: genre,
-        //     instruments: instruments,
-        //     memberNum: memberNum,
-        //     email: email,
-        //     website: website,
-        //     phone: phone,
-        //     profileImg: profileImg
-        // };
        
         if (!genre || !instruments || !website || !phone || !memberNum || !email) {
             alert("Please fill out every field");
@@ -34,7 +26,7 @@ $(function () {
             $("#profile-img").val("");
             // POST
             $.post("/api/artists", {
-                // data: artistProfile   
+                  
                 genre: genre,
                 instruments: instruments,
                 memberNum: memberNum,
@@ -44,7 +36,11 @@ $(function () {
                 profileImg: profileImg         
                 // eslint-disable-next-line no-unused-vars
             }).then(function (response) {
+                // console.log(response);
                 // window.location.replace(response);
+                console.log("Before testing get request");
+                    // console.log(response);
+                    window.location.replace(response.url);
             }).catch(function (err) {
                 // eslint-disable-next-line no-console
                 console.log(err);
@@ -64,17 +60,9 @@ $(function () {
         var venueEmail = $("#venue-email").val().trim();
         var phone = $("#venue-phone-num").val().trim();
         var website = $("#venue-website").val().trim();
+        var venueProfileImg = $("#venue-profile-img").val().trim();
 
-        // var venueProfile = {
-        //     address: address,
-        //     city: city,
-        //     state: state,
-        //     zip: zip,
-        //     venueEmail: venueEmail,
-        //     phone: phone,
-        //     website: website
-        // };
-        
+        console.log(venueProfileImg);
         if (!address || !city || !state || !zip || !venueEmail || !phone || !website) {
             alert("Please fill out every field");
         } else {
@@ -87,6 +75,7 @@ $(function () {
             $("#venue-email").val("");
             $("#venue-phone-num").val("");
             $("#venue-website").val("");
+            $("#venue-profile-img").val("");
 
             // POST
             $.post("/api/venues", {
@@ -96,10 +85,11 @@ $(function () {
                 zip: zip,
                 venueEmail: venueEmail,
                 phone: phone,
-                website: website
+                website: website,
+                venueProfileImg: venueProfileImg
             // eslint-disable-next-line no-unused-vars
             }).then(function (response) {
-                // window.location.replace(response);
+                window.location.replace(response);
             }).catch(function (err) {
                 // eslint-disable-next-line no-console
                 console.log(err);
