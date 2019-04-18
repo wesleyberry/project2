@@ -75,38 +75,72 @@ INSERT INTO Gigs (gigName, street_address, city, state, zipcode, phone, discript
                      "2538 Guadalupe St.", "Austin", "TX", "78705", 
                      "(555) 555-5555", 
                      "Electric Boogaloo",
-                     "https://via.placeholder.com/300X150",
-                     "4/20/2019" ),
+                     "http://www.one2onebar.com/index_files/stacks-image-55009ff.jpg",
+                     "Friday Night"),
                     
                     ( "Emo's",
                      "2015 E Riverside Dr.", "Austin", "TX", "78741", 
                      "(555) 555-5566",
                      "Aquatic Boogaloo",
-                     "https://via.placeholder.com/300X150",
-                     "4/20/2019" ),
+                     "https://static.spacecrafted.com/d0ff1849232e40769aef8fe7be7d853d/i/c1a873b75fab499d8654dc751d9f5554/2/GCuCv726gZycFxatknDdac/SEVENLIONS-EMOS-11.29.18-11_1920w.jpg",
+                     "Saturday Night"),
+                     
+                     ( "Lit Lounge",
+                       "215 East 6th Street", "Austin", "TX", "78701",
+                       "(512) 466-2604",
+                       "Premiere destination for Austin’s elite crowd ",
+                       "https://litloungeaustin.com/images/page2-img1.jpg",
+                       "Saturday, April 20, 2019, 7:00pm - 10:00pm"
+                     ),
+                     ("Broken Spoke",
+                     "3201 S Lamar Blvd", "Austin", "TX", "78704",
+                     "(555) 555-5555",
+                     "Honky Tonk",
+                     "https://images.unsplash.com/photo-1508252592163-5d3c3c559f36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                     "Saturday Night"),
 
-                    ( "Cactus Cafe",
-                     "University of Texas Student Union", "Austin", "TX", "78703", 
-                     "(555) 555-5566",
-                     "Smooth Jazz",
-                     "https://via.placeholder.com/300X150",
-                     "4/20/2019" ),
+                     ("One-2-One Bar",
+                     "1509 S Lamar Blvd", "Austin", "TX", "78704",
+                     "(555) 555-5555",
+                     "Rager",
+                     "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                     "Saturday Night"),
 
-                    ( "Cactus Cafe",
-                     "University of Texas Student Union", "Austin", "TX", "78703", 
-                     "(555) 555-5566",
-                     "Head BANGING!!",
-                     "https://via.placeholder.com/300X150",
-                     "4/21/2019" ),
-
+                    ( "Hole in the Wall",
+                     "2538 Guadalupe St.", "Austin", "TX", "78705", 
+                     "(555) 555-5555", 
+                     "Electric Boogaloo",
+                     "http://www.one2onebar.com/index_files/stacks-image-55009ff.jpg",
+                     "Friday Night"),
+                    
                     ( "Emo's",
                      "2015 E Riverside Dr.", "Austin", "TX", "78741", 
                      "(555) 555-5566",
-                     "Guitar GLIDE",
-                     "https://via.placeholder.com/300X150",
-                     "4/21/2019" );
+                     "Aquatic Boogaloo",
+                     "https://static.spacecrafted.com/d0ff1849232e40769aef8fe7be7d853d/i/c1a873b75fab499d8654dc751d9f5554/2/GCuCv726gZycFxatknDdac/SEVENLIONS-EMOS-11.29.18-11_1920w.jpg",
+                     "Saturday Night"),
+                     
+                     ( "Lit Lounge",
+                       "215 East 6th Street", "Austin", "TX", "78701",
+                       "(512) 466-2604",
+                       "Premiere destination for Austin’s elite crowd ",
+                       "https://litloungeaustin.com/images/page2-img1.jpg",
+                       "Saturday, April 20, 2019, 7:00pm - 10:00pm"
+                     ),
+                     ("Broken Spoke",
+                     "3201 S Lamar Blvd", "Austin", "TX", "78704",
+                     "(555) 555-5555",
+                     "Honky Tonk",
+                     "https://images.unsplash.com/photo-1508252592163-5d3c3c559f36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+                     "Saturday Night"),
 
-
+                     ("One-2-One Bar",
+                     "1509 S Lamar Blvd", "Austin", "TX", "78704",
+                     "(555) 555-5555",
+                     "Rager",
+                     "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+                     "Saturday Night")
+                     ;
 
 
 
