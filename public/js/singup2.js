@@ -34,7 +34,7 @@ $(function () {
                 role: role
             }).then(function (data) {
                 // console.log(data);
-                window.location.replace(data);
+                window.location.assign(data);
                 // eslint-disable-next-line no-console
                 // console.log("Signup.js test: Data returned to client for registration.");
             }).catch(handleSignupError);

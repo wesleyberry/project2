@@ -5,6 +5,7 @@ $(function () {
     $("#artist-create").on("click", function () {
         event.preventDefault();
         
+        var artistName = $("#artist-name").val().trim();
         var genre = $("#genre-des").val().trim();
         var instruments = $("#instrument-des").val().trim();
         var memberNum = $("#artist-num").val().trim();
@@ -12,11 +13,14 @@ $(function () {
         var website = $("#artist-website").val().trim();
         var phone = $("#artist-phone").val().trim();
         var profileImg = $("#profile-img").val().trim();
+
+        console.log(artistName);
        
-        if (!genre || !instruments || !website || !phone || !memberNum || !email) {
+        if (!artistName || !genre || !instruments || !website || !phone || !memberNum || !email) {
             alert("Please fill out every field");
         } else {
             // clear form
+            $("#artist-name").val("");
             $("#genre-des").val("");
             $("#instrument-des").val("");
             $("#artist-num").val("");
@@ -27,6 +31,7 @@ $(function () {
             // POST
             $.post("/api/artists", {
                   
+                artistName: artistName,
                 genre: genre,
                 instruments: instruments,
                 memberNum: memberNum,
@@ -39,8 +44,8 @@ $(function () {
                 // console.log(response);
                 // window.location.replace(response);
                 console.log("Before testing get request");
-                    // console.log(response);
-                    window.location.replace(response.url);
+                // console.log(response);
+                window.location.assign(response.url);
             }).catch(function (err) {
                 // eslint-disable-next-line no-console
                 console.log(err);
@@ -53,6 +58,7 @@ $(function () {
     $("#venue-create").on("click", function () {
         event.preventDefault();
         
+        var venueName = $("#venue-name").val().trim();
         var address = $("#venue-address").val().trim();
         var city = $("#city").val().trim();
         var state = $("#state").val().trim();
@@ -62,12 +68,12 @@ $(function () {
         var website = $("#venue-website").val().trim();
         var venueProfileImg = $("#venue-profile-img").val().trim();
 
-        console.log(venueProfileImg);
-        if (!address || !city || !state || !zip || !venueEmail || !phone || !website) {
+        if (!venueName || !address || !city || !state || !zip || !venueEmail || !phone || !website) {
             alert("Please fill out every field");
         } else {
 
             // clear form
+            $("#venue-name").val("");
             $("#venue-address").val("");
             $("#city").val("");
             $("#state").val("");
@@ -79,6 +85,7 @@ $(function () {
 
             // POST
             $.post("/api/venues", {
+                venueName: venueName,
                 address: address,
                 city: city,
                 state: state,
@@ -89,7 +96,7 @@ $(function () {
                 venueProfileImg: venueProfileImg
             // eslint-disable-next-line no-unused-vars
             }).then(function (response) {
-                window.location.replace(response);
+                window.location.assign(response.url);
             }).catch(function (err) {
                 // eslint-disable-next-line no-console
                 console.log(err);

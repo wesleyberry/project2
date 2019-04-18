@@ -10,7 +10,7 @@ body {
     height: 100%;
 }
 
-/* -----------------PROFILE----------------- */
+/* -----------------PROFILE GLOBAL----------------- */
 
 .profile {
     position: fixed;
@@ -21,6 +21,8 @@ body {
     width: 350px;
     height: 100%;
 }
+
+/* -----------------PROFILE ARTIST----------------- */
 
 .profile-picture {
     position: relative;
@@ -33,35 +35,32 @@ body {
 
 .band-name {
     font-weight: 900;
-}
-
-.band-subname {
-    font-size: 18px;
-    font-style: italic;
+    margin-bottom: 20px;
 }
 
 .band-genres {
     font-style: italic;
-    margin-top: 40px;
 }
 
-.contact {
+.profile-bottom {
     text-align: center;
-    margin-top: 40px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    margin-bottom: 40px;
+    width: 100%;
 }
 
-.gig-view {
+.logout {
     display: block;
     bottom: 0;
     margin: auto;
     margin-top: 30px;
-    color: #ffffff;
-    background: #af4ca3;
-    border: none;
     width: 180px;
 }
 
-/* -----------------CARD DIPSLAY----------------- */
+/* -----------------GIG DIPSLAY----------------- */
 
 #feed {
     margin: auto;
@@ -109,10 +108,6 @@ body {
     height: 150px;
 }
 
-.placeholder {
-    visibility: hidden;
-}
-
 .card-text {
     padding: 20px;
 }
@@ -126,13 +121,31 @@ body {
     font-size: 16px;
 }
 
-.tags {
-    color: #af4ca3;
-    position: absolute;
-    margin-bottom: 10px;
-    bottom: 0;
+.card-date {
     font-size: 14px;
     font-style: italic;
+    margin-bottom: 60px;
+}
+
+.card-button {
+    width: 120px;
+    position: absolute;
+    margin-bottom: 20px;
+    bottom: 0; 
+}
+
+/* -----------------VENUE----------------- */
+
+#gig-form {
+    margin: auto;
+    margin-left: 350px;
+    padding: 40px;
+    height: 100%;
+}
+
+#post-gig {
+    font-size: 36px;
+    font-weight: 700;
 }
 
 /* -----------------MODAL----------------- */
@@ -144,6 +157,47 @@ body {
 .modal-body {
     padding: 0;
     background-color: #232426;
+}
+
+/* -----------------ALL FORMS----------------- */
+
+.create-profile-heading {
+    text-align: center;
+    padding-top: 15px;
+}
+
+#gig-create,
+#venue-create,
+#artist-create {
+    background-color: #af4ca3;
+}
+
+#venue-create #artist-create {
+    margin-bottom: 20px;
+}
+
+.create-form {
+    padding-bottom: 30px;
+}
+
+.date-label {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #232426;
+}
+
+/* -----------------Buttons----------------- */
+
+.btn-main {
+    color: #ffffff;
+    background: #af4ca3;
+    border: none;
+}
+
+.btn-main:hover {
+    color: #ffffff;
+    background: #af4ca3;
+    border: none;
 }
 
 /* -----------------RESPONSIVENESS----------------- */
@@ -172,13 +226,11 @@ body {
         margin-left: 0px;
     }
 
+    #post-gig {
+        margin-left: 0px;
+    }
+
 }
-
-/* .card {
-    float: left;
-    margin: 20px;
-} */
-
 
 
 /* FONT BANK 

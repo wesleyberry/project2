@@ -1,0 +1,104 @@
+<!-- GIG VIEW MODAL -->
+<div class="modal fade" id="gig-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div id="card-display">
+                    {{#each gigs}}
+                    <div class="gig-card" data-toggle="modal" data-target="#form-modal">
+                        <img class="image" src={{this.profileImage}} alt="venue-image">
+                        <div class="card-text">
+                            <div class="card-title">{{this.gigName}}</div>
+                            <p class="card-desc">{{this.description}}</p>
+                            <hr>
+                            <div class="date">{{this.date}}</div>
+                            <button data-id="{{this.id}}" class="btn btn-primary btn-lg btn-main delete card-button">Book</button>
+                        </div>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- PROFILE -->
+<div class="profile">
+    <div class="profile-picture">
+        <img class="image" src={{venue.profileImage}} alt="profile-image">
+    </div>
+    <div class="profile-content">
+        <h1 class="band-name">{{venue.venueName}}</h1>
+        <p class="band-subname"></p>
+        <p class="band-genres"></p>
+        <div class="contact">
+            <p>{{venue.email}}</p>
+            <p>{{venue.website}}</p>
+            <p>{{venue.phone}}</p>
+        </div>
+        <button class="btn btn-primary btn-lg btn-main gig-view" data-toggle="modal" data-target="#gig-modal">View Gigs</button>
+    </div>
+</div>
+
+<!-- POST A GIG FORM -->
+<div id="gig-form">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div id="post-gig">Post a Gig</div>
+                <br>
+                <div class="row">
+                    <!-- Image Should be Captured Through Handlebars -->
+                    <!-- {{venue.img}} -->
+                </div>
+                <div class="row">
+                    <!-- Name Should be Captured Through Handlebars -->
+                    <!-- {{user.name}} -->
+                </div>
+                <div class="row">
+                    <!-- Address Should be Captured Through Handlebars -->
+                    <!-- {{user.address}} -->
+                </div>
+                <div class="createGigForm">
+                    <form>
+                        <div class="form-group">
+                            <label for="gig-des">Gig Description:</label>
+                            <input type="text" class="form-control" id="gig-des" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="genres">Genre(s):</label>
+                            <input type="text" class="form-control" id="gig-genre" placeholder="">
+                        </div>
+                        <div class="bootstrap-iso">
+                            <div class="form-group date-label">
+                                <label for="date">Date:</label>
+                                <div class="input-group">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar">
+                                        </i>
+                                    </div>
+                                    <input class="form-control" id="gig-date" name="date" placeholder="MM/DD/YYYY"
+                                        type="text" />
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <button class="btn btn-primary btn-lg btn-main" id="gig-create" type="submit"
+                            value="Post-Gig">Post Gig</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Include Date Range Picker -->
+<script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+
+<!-- Link to makeGig.js to handle the click event, post request, and calendar functionality -->
+<script type="text/javascript" src="../js/makeGig.js"></script>
