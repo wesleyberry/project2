@@ -1,6 +1,6 @@
-module.exports = function( sequelize, DataTypes ) {
+module.exports = function (sequelize, DataTypes) {
     var Gig = sequelize.define("Gig", {
-       
+
         gigName: DataTypes.STRING,
         street_address: DataTypes.STRING,
         city: DataTypes.STRING,
@@ -9,10 +9,12 @@ module.exports = function( sequelize, DataTypes ) {
         phone: DataTypes.STRING,
         discription: DataTypes.STRING,
         profileImage: DataTypes.STRING,
-        date: DataTypes.STRING
+        date: DataTypes.STRING,
+        isBooked: {
+            type: DataTypes.BOOLEAN,
+            defaultvalue: false
+        }
     });
 
     return Gig;
 }
-
-
