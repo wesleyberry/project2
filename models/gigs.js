@@ -7,7 +7,7 @@ module.exports = function (sequelize, DataTypes) {
         state: DataTypes.STRING,
         zipcode: DataTypes.STRING,
         phone: DataTypes.STRING,
-        discription: DataTypes.STRING,
+        description: DataTypes.STRING,
         profileImage: DataTypes.STRING,
         date: DataTypes.STRING,
         isBooked: {

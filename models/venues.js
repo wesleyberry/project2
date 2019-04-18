@@ -7,6 +7,7 @@ module.exports = function( sequelize, DataTypes ) {
         zipcode: DataTypes.STRING,
         phone: DataTypes.STRING,
         email: DataTypes.STRING,
+        profileImage: DataTypes.STRING,
         website: DataTypes.STRING
     });
 
