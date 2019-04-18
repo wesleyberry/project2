@@ -89,7 +89,7 @@ $(function () {
                 venueProfileImg: venueProfileImg
             // eslint-disable-next-line no-unused-vars
             }).then(function (response) {
-                window.location.replace(response);
+                window.location.assign(response.url);
             }).catch(function (err) {
                 // eslint-disable-next-line no-console
                 console.log(err);

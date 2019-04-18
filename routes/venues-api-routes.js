@@ -8,11 +8,12 @@ module.exports = function (app) {
                 UserId: req.user.id
             }
         }).then(function (dbVenue) {
+            console.log(dbVenue);
             var hbObject = {
                 venue: dbVenue
             }
             // console.log(dbVenue);
-            res.render("index-venue", hbObject);
+            res.render("index-artist", hbObject);
         });
     });
 }

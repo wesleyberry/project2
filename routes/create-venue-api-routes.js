@@ -19,9 +19,10 @@ module.exports = function (app) {
             zipcode: req.body.zip,
             phone: req.body.phone,
             email: req.body.venueEmail,
-            website: req.body.website
+            website: req.body.website,
+            UserId: req.user.id
         }).then(function() {
-            res.send("venue");
+            res.json({url:"api/venues"});
         }).catch(function(err) {
             console.log(err);
             res.json(err);
