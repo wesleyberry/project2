@@ -21,7 +21,7 @@ module.exports = function (app) {
             email: req.body.venueEmail,
             website: req.body.website
         }).then(function() {
-            res.send("venue");
+            res.json({url:"api/venues"});
         }).catch(function(err) {
             console.log(err);
             res.json(err);

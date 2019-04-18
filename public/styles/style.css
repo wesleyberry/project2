@@ -10,7 +10,7 @@ body {
     height: 100%;
 }
 
-/* -----------------PROFILE----------------- */
+/* -----------------PROFILE GLOBAL----------------- */
 
 .profile {
     position: fixed;
@@ -21,6 +21,8 @@ body {
     width: 350px;
     height: 100%;
 }
+
+/* -----------------PROFILE ARTIST----------------- */
 
 .profile-picture {
     position: relative;
@@ -55,13 +57,10 @@ body {
     bottom: 0;
     margin: auto;
     margin-top: 30px;
-    color: #ffffff;
-    background: #af4ca3;
-    border: none;
     width: 180px;
 }
 
-/* -----------------CARD DIPSLAY----------------- */
+/* -----------------GIG DIPSLAY----------------- */
 
 #feed {
     margin: auto;
@@ -135,6 +134,20 @@ body {
     font-style: italic;
 }
 
+/* -----------------VENUE----------------- */
+
+#gig-form {
+    margin: auto;
+    margin-left: 350px;
+    padding: 40px;
+    height: 100%;
+}
+
+#post-gig {
+    font-size: 36px;
+    font-weight: 700;
+}
+
 /* -----------------MODAL----------------- */
 
 .modal-dialog {
@@ -144,6 +157,46 @@ body {
 .modal-body {
     padding: 0;
     background-color: #232426;
+}
+
+/* -----------------ALL FORMS----------------- */
+
+.create-profile-heading {
+    text-align: center;
+    padding-top: 15px;
+}
+#gig-create,
+#venue-create,
+#artist-create {
+    background-color: #af4ca3;
+}
+#venue-create
+#artist-create {
+    margin-bottom: 20px;
+}
+
+.create-form {
+    padding-bottom: 30px;
+}
+
+.date-label {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #232426;
+}
+
+/* -----------------Buttons----------------- */
+
+.btn-main {
+    color: #ffffff;
+    background: #af4ca3;
+    border: none;
+}
+
+.btn-main:hover {
+    color: #ffffff;
+    background: #af4ca3;
+    border: none;
 }
 
 /* -----------------RESPONSIVENESS----------------- */
@@ -172,13 +225,11 @@ body {
         margin-left: 0px;
     }
 
+    #post-gig {
+        margin-left: 0px;
+    }
+
 }
-
-/* .card {
-    float: left;
-    margin: 20px;
-} */
-
 
 
 /* FONT BANK 
