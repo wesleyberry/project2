@@ -1,31 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<!-- PROFILE -->
+<div class="profile">
+    <div class="profile-picture">
+        <img class="image" src={{venue.profileImage}} alt="profile-image">
+    </div>
+    <div class="profile-content">
+        <h1 class="band-name">{{venue.venueName}}</h1>
+        <p class="band-subname"></p>
+        <p class="band-genres">{{}}</p>
+        <div class="contact">
+            <p>{{venue.email}}</p>
+            <p>{{venue.website}}</p>
+            <p>{{venue.phone}}</p>
+        </div>
+        <button class="btn btn-primary btn-lg gig-view">Profile?</button>
+    </div>
+</div>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Make a Gig</title>
-    <script src="https://code.jquery.com/jquery-3.4.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <link href="https://fonts.googleapis.com/css?family=Lato: 100,300,400,700,900" rel="stylesheet">
-    <!-- Special version of Bootstrap that only affects content wrapped in .bootstrap-iso -->
-    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
-    <!--Font Awesome (added because you use icons in your prepend/append)-->
-    <link rel="stylesheet" href="https://formden.com/static/cdn/font-awesome/4.4.0/css/font-awesome.min.css" />
-    <!-- george's style sheet -->
-    <link rel="stylesheet" href="../styles/style2.css">
+<!-- POST A GIG FORM -->
+<div id="post-gig">
 
-</head>
-
-<body>
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
@@ -71,7 +64,8 @@
             </div>
         </div>
     </div>
-</body>
+
+</div>
 
 <!-- Include Date Range Picker -->
 <script type="text/javascript"
@@ -81,5 +75,3 @@
 
 <!-- Link to makeGig.js to handle the click event, post request, and calendar functionality -->
 <script type="text/javascript" src="../js/makeGig.js"></script>
-
-</html>
