@@ -1,5 +1,7 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 var db = require("../models");
+var path = require("path");
 var passport = require("../config/passport");
 var express    = require('express');
 var bodyParser = require('body-parser');
@@ -14,30 +16,32 @@ module.exports = function (app) {
 
     app.post("/api/loginArtist", passport.authenticate("local"), function (req, res) {
       // eslint-disable-next-line no-console
-      // console.log("Test after Artist authentication: " + req.user);
-      res.json("/bandSign");
+      console.log("Before sending JSON");
+      res.send("bandSign");
+      // res.sendFile(path.join(__dirname, "../public/html/venueCreateProfile.html"));
     });
 
     app.post("/api/loginVenue", passport.authenticate("local"), function (req, res) {
       // eslint-disable-next-line no-console
-      // console.log("Test after Venue uthentication: " + req.user);
-      res.json("/venueSign");
+      res.send("venueSign");
+      // res.sendFile(path.join(__dirname, "../public/html/bandCreateProfile.html"));
     });
 
   app.post("/api/signup", function (req, res) {
     // eslint-disable-next-line no-console
     console.log(req.body);
-    console.log(req.body.username);
+    console.log(req.body.name);
     console.log(req.body.password);
     console.log(req.body.role);
     if (req.body.role == "artist") {
       db.User.create({
-        name: req.body.username,
+        name: req.body.name,
         password: req.body.password,
         role: req.body.role
       }).then(function () {
-        console.log("Create callback: ");
+        console.log("Create artist callback: ");
         res.redirect(307, "/api/loginArtist");
+        console.log("test");
       }).catch(function (err) {
         // eslint-disable-next-line no-console
         console.log(err);
@@ -45,10 +49,11 @@ module.exports = function (app) {
       });
     } else {
       db.User.create({
-        name: req.body.username,
+        name: req.body.name,
         password: req.body.password,
         role: req.body.role
       }).then(function () {
+        console.log("Create venue callback: ");
         res.redirect(307, "/api/loginVenue");
       }).catch(function (err) {
         // eslint-disable-next-line no-console
@@ -64,12 +69,12 @@ module.exports = function (app) {
     });
 
     app.get("/api/user_data", function (req, res) {
+      console.log("User data request");
       if (!req.user) {
         res.json({});
-      } else {
-        res.json({
-          // Include in here everything we want to return to the user
-        });
+      } else if (req.user.role == "artist"){
+        console.log("Confirmed artist - redirect");
+        res.redirect(307, "/api/artists/");
       }
     });
   }
