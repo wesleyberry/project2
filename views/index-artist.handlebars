@@ -16,14 +16,13 @@
   </div>
   <div class="profile-content">
     <h1 class="band-name">{{artist.artistName}}</h1>
-    <p class="band-subname"></p>
     <p class="band-genres">{{artist.genre}}</p>
-    <div class="contact">
+    <div class="profile-bottom">
       <p>{{artist.email}}</p>
       <p>{{artist.website}}</p>
       <p>{{artist.phone}}</p>
+      <button id="logout" class="btn btn-primary btn-lg btn-main logout">Logout</button>
     </div>
-    <button class="btn btn-primary btn-lg btn-main gig-view" id="logout">Logout</button>
   </div>
 </div>
 
@@ -32,7 +31,6 @@
 
   {{!-- venue filter --}}
  
-
   <div class="input-group mb-3">
     <div class="input-group-prepend">
       <button id="filter" class="btn btn-outline-secondary" type="button"><i class="fas fa-camera fa-sm"></i></button>
@@ -45,15 +43,7 @@
     </select>
   </div>
 
-
   {{!-- venue filter --}}
-
-
-  <form id="search">
-    <div class="form-group">
-      <input type="search" class="form-control" id="search-bar" placeholder="Search">
-    </div>
-  </form>
 
   <div id="card-display">
     {{#each gig}}
@@ -63,7 +53,8 @@
         <div class="card-title">{{this.gigName}}</div>
         <p class="card-desc">{{this.discription}}</p>
         <hr>
-        <div class="tags">{{this.date}}</div>
+        <div class="card-date">{{this.date}}</div>
+        <button class="btn btn-primary btn-lg btn-main book card-button">Book</button>
       </div>
     </div>
     {{/each}}
@@ -72,4 +63,4 @@
 </div>
 
 {{!-- link to handle the logout button --}}
-<script type="text/javascript" src="../js/logout.js"></script>
+<script type="text/javascript" src="/js/logout.js"></script>

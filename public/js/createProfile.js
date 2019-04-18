@@ -45,8 +45,8 @@ $(function () {
                 // console.log(response);
                 // window.location.replace(response);
                 console.log("Before testing get request");
-                    // console.log(response);
-                    window.location.replace(response.url);
+                // console.log(response);
+                window.location.assign(response.url);
             }).catch(function (err) {
                 // eslint-disable-next-line no-console
                 console.log(err);
@@ -97,7 +97,7 @@ $(function () {
                 venueProfileImg: venueProfileImg
             // eslint-disable-next-line no-unused-vars
             }).then(function (response) {
-                window.location.replace(response);
+                window.location.assign(response.url);
             }).catch(function (err) {
                 // eslint-disable-next-line no-console
                 console.log(err);
