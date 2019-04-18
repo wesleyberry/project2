@@ -5,7 +5,7 @@ var db = require("../models");
 
 passport.use(new LocalStrategy(
     {
-      usernameField: "name"
+      passwordField: "password"
     },
     function(name, password, done) {
       // console.log("are we looking for something")
