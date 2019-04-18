@@ -20,7 +20,7 @@ $(function () {
                 password: password,
                 role: role
             }).then(function (response) {
-                window.location.replace(response.url);
+                window.location.assign(response.url);
                 console.log(response.id);
                 console.log(response.url);
                 console.log(response.role);
