@@ -9,11 +9,11 @@ var bodyParser = require('body-parser');
 module.exports = function(app) {
     app.post("/api/loginArtistAfter", passport.authenticate("local"), function(req, res) {
         console.log("post auth test");
-        res.json({url:"/bands", id: req.user.id, role: req.user.role});
+        res.json({url:"/api/artists", id: req.user.id, role: req.user.role});
         // res.json(req.user);
     });
     app.post("/api/loginVenueAfter", passport.authenticate("local"), function(req, res) {
-        res.json("/venues");
+        res.json({url:"/api/venues", id: req.user.id, role: req.user.role});
     });
 
     app.post("/api/login", function(req, res) {
