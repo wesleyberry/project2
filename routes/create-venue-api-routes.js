@@ -13,6 +13,7 @@ module.exports = function (app) {
 
     app.post("/api/venues", function(req, res) {
         db.Venue.create({
+            venueName: req.body.venueName,
             street_address: req.body.address,
             city: req.body.city,
             state: req.body.state,
