@@ -12,7 +12,7 @@ module.exports = function (app) {
                 venue: dbVenue
             }
             // console.log(dbVenue);
-            res.render("index-artist", hbObject);
+            res.render("index-venue", hbObject);
         });
     });
 }

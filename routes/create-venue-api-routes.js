@@ -21,6 +21,7 @@ module.exports = function (app) {
             phone: req.body.phone,
             email: req.body.venueEmail,
             website: req.body.website,
+            image: req.body.venueProfileImg,
             UserId: req.user.id
         }).then(function() {
             res.json({url:"api/venues"});

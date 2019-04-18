@@ -5,3 +5,9 @@ $(document).ready(function() {
         console.log(data);
     });
 });
+
+$(document).ready(function() {
+    $.get("/api/gigs").then(function(data) {
+        console.log(data);
+    });
+});

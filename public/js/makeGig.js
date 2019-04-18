@@ -31,6 +31,7 @@ $("#gig-create").on("click", function (event) {
     }).then(function (response) {
         // window.location.replace(response);
         console.log(response);
+        location.reload();
     }).catch(function (err) {
         console.log(err);
     });
