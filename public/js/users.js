@@ -8,6 +8,7 @@ $(document).ready(function() {
 
 $(document).ready(function() {
     $.get("/api/gigs").then(function(data) {
+        location.reload();
         console.log(data);
     });
 });
