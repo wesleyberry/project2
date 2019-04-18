@@ -57,9 +57,6 @@ body {
     bottom: 0;
     margin: auto;
     margin-top: 30px;
-    color: #ffffff;
-    background: #af4ca3;
-    border: none;
     width: 180px;
 }
 
@@ -139,12 +136,16 @@ body {
 
 /* -----------------VENUE----------------- */
 
-#post-gig {
+#gig-form {
     margin: auto;
     margin-left: 350px;
     padding: 40px;
     height: 100%;
-    overflow: hidden;
+}
+
+#post-gig {
+    font-size: 36px;
+    font-weight: 700;
 }
 
 /* -----------------MODAL----------------- */
@@ -174,6 +175,30 @@ body {
     margin-bottom: 20px;
 }
 
+.create-form {
+    padding-bottom: 30px;
+}
+
+.date-label {
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #232426;
+}
+
+/* -----------------Buttons----------------- */
+
+.btn-main {
+    color: #ffffff;
+    background: #af4ca3;
+    border: none;
+}
+
+.btn-main:hover {
+    color: #ffffff;
+    background: #af4ca3;
+    border: none;
+}
+
 /* -----------------RESPONSIVENESS----------------- */
 
 @media screen and (max-width: 1300px) {
@@ -197,6 +222,10 @@ body {
     }
 
     #feed {
+        margin-left: 0px;
+    }
+
+    #post-gig {
         margin-left: 0px;
     }
 

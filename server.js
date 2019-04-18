@@ -35,7 +35,7 @@ require("./routes/login-api-routes")(app);
 require("./routes/artists-api-routes")(app);
 require("./routes/create-artist-api-routes")(app);
 require("./routes/create-venue-api-routes")(app);
-// require("./routes/venues-api-routes")(app);
+require("./routes/venues-api-routes")(app);
 
 var syncOptions = { force: false };
 
