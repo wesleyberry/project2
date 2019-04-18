@@ -48,10 +48,8 @@ $(function () {
                 // console.log(response);
                 // window.location.replace(response);
                 console.log("Before testing get request");
-                $.get("api/artists/").then(function(data) {
-                    console.log(data);
-                    window.location.replace(data);
-                });
+                    // console.log(response);
+                    window.location.replace(response.url);
             }).catch(function (err) {
                 // eslint-disable-next-line no-console
                 console.log(err);

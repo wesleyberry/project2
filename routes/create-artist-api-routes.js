@@ -23,7 +23,7 @@ module.exports = function (app) {
             website: req.body.website,
             UserId: req.user.id
         }).then(function() {
-            res.send(200);
+            res.json({url:"api/artists"});
         }).catch(function(err) {
             console.log(err);
             res.json(err);
