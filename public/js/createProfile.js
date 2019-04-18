@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 $(function () {
+
 // create artist profile
     $("#artist-create").on("click", function () {
         event.preventDefault();
