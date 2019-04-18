@@ -5,6 +5,7 @@
             <div class="modal-body">
                 <div id="card-display">
                     {{#each gig}}
+                    {{!-- {{#unless isBooked}} --}}
                     <div class="gig-card" data-toggle="modal" data-target="#form-modal">
                         <img class="image" src={{this.profileImage}} alt="venue-image">
                         <div class="card-text">
@@ -12,9 +13,11 @@
                             <p class="card-desc">{{this.discription}}</p>
                             <hr>
                             <div class="date">{{this.date}}</div>
-                            <button data-id="{{this.id}}" class="btn btn-primary btn-lg btn-main delete card-button">Book</button>
+                            <button data-id="{{this.id}}"
+                                class="btn btn-primary btn-lg btn-main delete card-button">Book</button>
                         </div>
                     </div>
+                    {{!-- {{/unless}} --}}
                     {{/each}}
                 </div>
             </div>
@@ -29,14 +32,13 @@
     </div>
     <div class="profile-content">
         <h1 class="band-name">{{venue.venueName}}</h1>
-        <p class="band-subname"></p>
         <p class="band-genres"></p>
-        <div class="contact">
+        <div class="profile-bottom">
             <p>{{venue.email}}</p>
             <p>{{venue.website}}</p>
             <p>{{venue.phone}}</p>
+            <button class="btn btn-primary btn-lg btn-main gig-view" data-toggle="modal" data-target="#gig-modal">View Gigs</button>
         </div>
-        <button class="btn btn-primary btn-lg btn-main gig-view" data-toggle="modal" data-target="#gig-modal">View Gigs</button>
     </div>
 </div>
 
