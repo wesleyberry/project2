@@ -7,12 +7,6 @@ $(function () {
         var password = $("#pass-login").val().trim();
         var role = $("input[name='role-signup']:checked").val();
         
-        // var loginBody = {
-        //     username: username,
-        //     password: password,
-        //     role: role
-        // };
-
         if (!name || !password || !role) {
             alert("Please fill out every field");
         } else {
@@ -22,7 +16,6 @@ $(function () {
             // $("#pass-login").val("");
 
             $.post("/api/login", {
-                // data: loginBody
                 name: name,
                 password: password,
                 role: role
@@ -35,25 +28,7 @@ $(function () {
                 // eslint-disable-next-line no-console
                 console.log(err);
             });
-            // if (role === "artist"){
-            //     $.ajax("/api/artists/" +id, {
-            //         data: loginBody
-            //     }).then(function (response) {
-            //         // window.location.replace(response);
-            //     }).catch(function (err) {
-            //         // eslint-disable-next-line no-console
-            //         console.log(err);
-            //     });
-            // } else {
-            //     $.ajax("/api/venues/" +id, {
-            //          data: loginBody
-            // }).then(function (response) {
-            //     // window.location.replace(response);
-            // }).catch(function (err) {
-            //     // eslint-disable-next-line no-console
-            //     console.log(err);
-            // });
-            // }
+          
         }
     });
 });

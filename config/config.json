@@ -1,11 +1,11 @@
 {
   "development": {
-    "username": "pskpom2hkolu8ffc",
-    "password": "bkg8rg7zeq6vhqqy",
-    "database": "fl5pnoyhsb6g5rry",
-    "host": "ctgplw90pifdso61.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "root",
+    "database": "gigeasy",
+    "host": "127.0.0.1",
     "dialect": "mysql",
-    "port": 3306
+    "port": 8889
   },
   "test": {
     "username": "root",
