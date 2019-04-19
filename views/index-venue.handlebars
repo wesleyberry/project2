@@ -6,7 +6,7 @@
                 <div id="card-display">
                     {{#each gigs}}
                     <div class="gig-card" data-toggle="modal" data-target="#form-modal">
-                        <img class="image" src={{this.profileImage}} alt="venue-image">
+                        <img class="image" src={{this.image}} alt="venue-image">
                         <div class="card-text">
                             <div class="card-title">{{this.gigName}}</div>
                             <p class="card-desc">{{this.description}}</p>
@@ -25,7 +25,7 @@
 <!-- PROFILE -->
 <div class="profile">
     <div class="profile-picture">
-        <img class="image" src={{venue.profileImage}} alt="profile-image">
+        <img class="image" src={{venue.image}} alt="profile-image">
     </div>
     <div class="profile-content">
         <h1 class="band-name">{{venue.venueName}}</h1>
