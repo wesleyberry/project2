@@ -68,6 +68,7 @@ body {
 
 .divider {
     border: solid 1px #333437;
+    margin-bottom: 10px;
 }
 
 /* -----------------PROFILE ARTIST----------------- */
@@ -118,7 +119,7 @@ body {
     margin-bottom: 20px;
     position: relative;
     box-shadow: 1px 1px 5px #111;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .image {
@@ -140,9 +141,13 @@ body {
     font-size: 16px;
 }
 
+.card-genre {
+    color: #af4ca3;
+    font-style: italic;
+}
+
 .card-date {
     font-size: 14px;
-    font-style: italic;
     margin-bottom: 60px;
 }
 
@@ -229,25 +234,25 @@ body {
 
 @media screen and (max-width: 1300px) {
 
-    .venue-card {
+    .gig-card {
         flex: 0 1 49%;
     }
 }
 
 @media screen and (max-width: 1000px) {
 
-    .venue-card {
+    .gig-card {
         flex: 0 1 100%;
     }
 }
 
 @media screen and (max-width: 640px) {
 
-    .profile {
+    .profile-left {
         display: none;
     }
 
-    #feed {
+    .profile-right {
         margin-left: 0px;
     }
 

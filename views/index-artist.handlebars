@@ -32,8 +32,7 @@
 <!-- FEED -->
 <div class="profile-right">
 
-  {{!-- venue filter --}}
-
+  {{!-- VENUE FILTER --}}
   <form class="input-group mb-3">
     <div class="input-group-prepend">
       <button class="btn btn-outline-secondary" type="submit" id="filter">Filter</button>
@@ -45,19 +44,19 @@
       {{/each}}
     </select>
   </form>
-
-  {{!-- venue filter --}}
+  {{!-- VENUE FILTER --}}
 
   <div class="card-display">
     {{#each gigs}}
     {{!-- {{#unless isBooked}} --}}
-    <div class="gig-card" data-toggle="modal" data-target="#form-modal">
-      <img class="image" src={{this.profileImage}} alt="venue-image">
+    <div class="gig-card">
+      <img class="image" src={{this.image}} alt="venue-image">
       <div class="card-text">
         <div class="card-title">{{this.gigName}}</div>
-        <p class="card-desc">{{this.discription}}</p>
-        <hr>
-        <div class="card-date">{{this.date}}</div>
+        <p class="card-desc">{{this.description}}</p>
+        {{!-- <hr class="divider"> --}}
+        <div class="card-genre">{{this.genre}}</div>
+        <div class="card-date"><strong>{{this.date}}</strong></div>
         <button class="btn btn-primary btn-lg btn-main book card-button">Book</button>
       </div>
     </div>

@@ -57,12 +57,13 @@
         {{#each gig}}
         {{!-- {{#unless isBooked}} --}}
         <div class="gig-card" data-toggle="modal" data-target="#form-modal">
-            <img class="image" src={{this.profileImage}} alt="venue-image">
+            <img class="image" src={{this.image}} alt="venue-image">
             <div class="card-text">
                 <div class="card-title">{{this.gigName}}</div>
                 <p class="card-desc">{{this.description}}</p>
-                <hr>
-                <div class="date">{{this.date}}</div>
+                <hr class="divider">
+                <div class="card-genre">{{this.genre}}</div>
+                <div class="card-date">{{this.date}}</div>
                 <button data-id="{{this.id}}" class="btn btn-primary btn-lg btn-main delete card-button">Delete</button>
             </div>
         </div>
