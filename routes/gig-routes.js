@@ -18,7 +18,7 @@ module.exports = function(app) {
                     genre: req.body.gigGenre,
                     VenueId: venueInfo[0].id,
                     gigName: venueInfo[0].venueName,
-                    profileImage: venueInfo[0].image
+                    image: venueInfo[0].image
         }).then(function() {
             res.send(200);
         }).catch(function(err) {
