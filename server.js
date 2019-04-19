@@ -38,7 +38,7 @@ require("./routes/create-venue-api-routes")(app);
 require("./routes/venues-api-routes")(app);
 require("./routes/gig-routes")(app);
 
-var syncOptions = { force: true };
+var syncOptions = { force: false };
 
 // eslint-disable-next-line no-undef
 if (process.env.NODE_ENV === "test") {
