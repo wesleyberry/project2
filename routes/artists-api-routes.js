@@ -12,7 +12,7 @@ module.exports = function (app) {
                 }).then(function (dbArtist) {
                     var hbObject = {
                         artist: dbArtist,
-                        gig: dbGig,
+                        gigs: dbGig,
 
                     }
                     // console.log(dbArtist);

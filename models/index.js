@@ -28,7 +28,7 @@ if (config.use_env_variable) {
       "port":process.env.db_port
     }
   )
-}else {
+} else {
   var sequelize = new Sequelize(
     config.database,
     config.username,
