@@ -15,7 +15,7 @@ module.exports = function(app) {
                     date: req.body.gigDate,
                     description: req.body.gigDes,
                     genre: req.body.gigGenre,
-                    VenueId: req.user.id,
+                    // VenueId: req.user.id,
                     gigName: venueInfo[0].image,
                     profileImage: venueInfo[0].venueName
         }).then(function() {
