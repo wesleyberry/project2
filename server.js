@@ -38,11 +38,11 @@ require("./routes/create-venue-api-routes")(app);
 require("./routes/venues-api-routes")(app);
 require("./routes/gig-routes")(app);
 
-var syncOptions = { force: false };
+var syncOptions = { force: true };
 
 // eslint-disable-next-line no-undef
 if (process.env.NODE_ENV === "test") {
-  syncOptions.force = true;
+  syncOptions.force = false;
 }
 
 db.sequelize.sync(syncOptions).then(function() {
