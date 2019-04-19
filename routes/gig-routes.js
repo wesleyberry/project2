@@ -3,7 +3,7 @@
 var db = require("../models");
 module.exports = function(app) {
     //  Posts to gigs table from venue view
-    app.post("/api/gigs", isAuthenticated, function(req, res) {
+    app.post("/api/gigs", function(req, res) {
         db.Venue.findAll({
             where: {
                 id: req.user.id
@@ -28,7 +28,7 @@ module.exports = function(app) {
         });
     });
     // Get one specific gig
-    app.get("/api/gigs/:gigId", isAuthenticated, function (req, res) {
+    app.get("/api/gigs/:id", function (req, res) {
         var gigId = req.params.id
         db.Gig.findOne({
             where: {
@@ -42,7 +42,7 @@ module.exports = function(app) {
         });
     });
 
-    app.put("/api/gigs/:id", isAuthenticated, function (req, res) {
+    app.put("/api/gigs/:id", function (req, res) {
         var id = req.params.id
         console.log(id);
         db.Gig.update({
