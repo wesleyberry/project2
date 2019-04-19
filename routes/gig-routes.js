@@ -41,27 +41,27 @@ module.exports = function(app) {
         });
     });
     // Get all gigs for specific user
-    app.get("/api/gigs", function(req, res) {
-        console.log(req.user.id);
-        db.Gig.findAll({
-            where:{
-                VenueId: req.user.id
-            }
-        }).then(function(dbGig) {
-            db.Venue.findAll({
-                where: {
-                    UserId: req.user.id
-                }
-            }).then(function(dbVenue) {
-                console.log(dbGig);
-                var hbsObject = {
-                    gig: dbGig
-                }   
-                res.send(dbGig);
-                console.log(hbsObject);
-                console.log(dbVenue[0].venueName);
-                console.log(dbVenue[0].image);
-            });
-        });
-    });
+    // app.get("/api/gigs", function(req, res) {
+    //     console.log(req.user.id);
+    //     db.Gig.findAll({
+    //         where:{
+    //             VenueId: req.user.id
+    //         }
+    //     }).then(function(dbGig) {
+    //         db.Venue.findAll({
+    //             where: {
+    //                 UserId: req.user.id
+    //             }
+    //         }).then(function(dbVenue) {
+    //             console.log(dbGig);
+    //             var hbsObject = {
+    //                 gig: dbGig
+    //             }   
+    //             res.send(dbGig);
+    //             console.log(hbsObject);
+    //             console.log(dbVenue[0].venueName);
+    //             console.log(dbVenue[0].image);
+    //         });
+    //     });
+    // });
 }
