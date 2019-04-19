@@ -8,11 +8,20 @@ module.exports = function (app) {
                 UserId: req.user.id
             }
         }).then(function (dbVenue) {
-            var hbObject = {
-                venue: dbVenue
-            }
-            // console.log(dbVenue);
-            res.render("index-venue", hbObject);
+            db.Gig.findAll({
+                where:{
+                    VenueId: req.user.id
+                }
+            }).then(function(dbGig) {
+                var hbObject = {
+                    venue: dbVenue,
+                    gigs: dbGig
+                }
+                // console.log(dbVenue);
+                res.render("index-venue", hbObject);
+            })
         });
     });
 }
+
+
