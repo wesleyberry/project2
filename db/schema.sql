@@ -1,4 +1,4 @@
-/*### Schema
+### Schema
 
 DROP DATABASE IF EXISTS exampledb;
 CREATE DATABASE exampledb;
@@ -11,21 +11,40 @@ CREATE DATABASE gigeasy;
 
 USE gigeasy;
 
+CREATE TABLE users (
+  id INTEGER AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  password VARCHAR(255) NOT NULL,
+  role VARCHAR(100) NOT NULL,
+  PRIMARY KEY(id)
+);
+
 CREATE TABLE venues
 (
   id int NOT NULL AUTO_INCREMENT,
-  name VARCHAR(100) NOT NULL,
-  email VARCHAR(100),
-  website VARCHAR(100),
+  venueName VARCHAR(255) NOT NULL,
+  street_address VARCHAR(255),
+  city VARCHAR(255),
+  state VARCHAR(255),
+  zipCode VARCHAR(255),
+  phone VARCHAR(255),
+  email VARCHAR(255),
+  website VARCHAR(255),
+  image VARCHAR(255),
   PRIMARY KEY (id)
 );
 
 CREATE TABLE artists
 (
   id int NOT NULL AUTO_INCREMENT,
-  name VARCHAR(100) NOT NULL,
-  email VARCHAR(100),
-  website VARCHAR(100),
+  artistName VARCHAR(255) NOT NULL,
+  genre VARCHAR(255),
+  instrumentation VARCHAR(255),
+  numberOfMembers VARCHAR(255),
+  email VARCHAR(255),
+  phone VARCHAR(255),
+  profileImage VARCHAR(255),
+  website VARCHAR(255),
   PRIMARY KEY (id)
 );
 
@@ -40,13 +59,6 @@ CREATE TABLE gigs
   FOREIGN KEY (artist_id) REFERENCES artists(id)
 );
 
-CREATE TABLE users (
-id INTEGER AUTO_INCREMENT,
-name VARCHAR(100) NOT NULL,
-password VARCHAR(100) NOT NULL,
-role VARCHAR(100) NOT NULL,
-PRIMARY KEY(id)
-);
 
 
 */
