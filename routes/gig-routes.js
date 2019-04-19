@@ -6,16 +6,17 @@ module.exports = function(app) {
     app.post("/api/gigs", function(req, res) {
         db.Venue.findAll({
             where: {
-                UserId: req.user.id
+                id: req.user.id
             }
         }).then(function(venueInfo) {
             console.log(venueInfo[0].image);
             console.log(venueInfo[0].venueName);
+            console.log(venueInfo[0].id);
                 db.Gig.create({
                     date: req.body.gigDate,
                     description: req.body.gigDes,
                     genre: req.body.gigGenre,
-                    // VenueId: req.user.id,
+                    VenueId: venueInfo[0].id,
                     gigName: venueInfo[0].venueName,
                     profileImage: venueInfo[0].image
         }).then(function() {
