@@ -36,7 +36,7 @@ module.exports = function(app) {
             }
         }).then(function(results) {
             var hbsObject = {
-                gig: results
+                gigs: results
             }
             res.send(hbsObject);
         });
