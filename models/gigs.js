@@ -13,7 +13,8 @@ module.exports = function (sequelize, DataTypes) {
         date: DataTypes.STRING,
         isBooked: {
             type: DataTypes.BOOLEAN,
-            defaultvalue: false
+            defaultvalue: false,
+            allowNull: false
         }
     });
 
