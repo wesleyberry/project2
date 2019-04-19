@@ -5,6 +5,7 @@ var passport = require("../config/passport");
 var express    = require('express');
 // eslint-disable-next-line no-unused-vars
 var bodyParser = require('body-parser');
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
     app.post("/api/loginArtistAfter", passport.authenticate("local"), function(req, res) {

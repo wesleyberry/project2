@@ -48,7 +48,7 @@
 
   <div class="card-display">
     {{#each gigs}}
-    {{!-- {{#unless isBooked}} --}}
+    {{#unless isBooked}}
     <div class="gig-card">
       <img class="image" src={{this.image}} alt="venue-image">
       <div class="card-text">
@@ -60,7 +60,7 @@
         <button class="btn btn-primary btn-lg btn-main book card-button" data-id="{{this.id}}">Book</button>
       </div>
     </div>
-    {{!-- {{/unless}} --}}
+    {{/unless}}
     {{/each}}
   </div>
 

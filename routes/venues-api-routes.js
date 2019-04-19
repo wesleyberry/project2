@@ -1,9 +1,10 @@
 /* eslint-disable no-console */
 var db = require("../models");
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
     // Get route for retrieving a single venue
-    app.get("/api/venues/", function (req, res) {
+    app.get("/api/venues/", isAuthenticated, function (req, res) {
         db.Venue.findOne({
             where: {
                 UserId: req.user.id
@@ -24,7 +25,7 @@ module.exports = function (app) {
         });
     });
 
-    app.delete("/api/gigs/:id", function(req, res) {
+    app.delete("/api/gigs/:id", isAuthenticated, function(req, res) {
         console.log(req.params.id);
         var id = req.params.id;
         db.Gig.destroy({
