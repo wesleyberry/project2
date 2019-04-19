@@ -10,13 +10,16 @@
 </div>
 
 <!-- PROFILE -->
-<div class="profile">
+<div class="profile-left">
   <div class="profile-picture">
     <img class="image" src={{artist.profileImage}} alt="profile-image">
   </div>
   <div class="profile-content">
     <h1 class="name">{{artist.artistName}}</h1>
     <p class="band-genres">{{artist.genre}}</p>
+    <br>
+    <p>Members: <strong>{{artist.numberOfMembers}}</strong></p>
+    <p class="instruments">{{artist.instrumentation}}</p>
     <div class="profile-bottom">
       <p>{{artist.email}}</p>
       <p>{{artist.website}}</p>
@@ -27,29 +30,27 @@
 </div>
 
 <!-- FEED -->
-<div id="feed">
+<div class="profile-right">
 
   {{!-- venue filter --}}
 
-  <div class="input-group mb-3">
+  <form class="input-group mb-3">
     <div class="input-group-prepend">
-      <button id="filter" class="btn btn-outline-secondary" type="button"><i class="fas fa-camera fa-sm"></i></button>
+      <button class="btn btn-outline-secondary" type="submit" id="filter">Filter</button>
     </div>
-    <select class="custom-select" id="inputGroupSelect03">
-      <option selected>Filter by Venue</option>
-      {{#each gig}}
-       {{#unless isBooked}}
-      <option value="{{this.id}}">{{this.gigName}}</option>
-      {{/unless}}
+    <select name="id" class="custom-select" id="inputGroupSelect03">
+      <option selected>Select Venue</option>
+      {{#each gigs}}
+      <option value="{{this.gigName}}">{{this.gigName}}</option>
       {{/each}}
     </select>
-  </div>
+  </form>
 
   {{!-- venue filter --}}
 
-  <div id="card-display">
-    {{#each gig}}
-    {{#unless isBooked}}
+  <div class="card-display">
+    {{#each gigs}}
+    {{!-- {{#unless isBooked}} --}}
     <div class="gig-card" data-toggle="modal" data-target="#form-modal">
       <img class="image" src={{this.profileImage}} alt="venue-image">
       <div class="card-text">
@@ -60,7 +61,7 @@
         <button class="btn btn-primary btn-lg btn-main book card-button">Book</button>
       </div>
     </div>
-    {{/unless}}
+    {{!-- {{/unless}} --}}
     {{/each}}
   </div>
 

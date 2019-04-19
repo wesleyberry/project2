@@ -12,7 +12,7 @@ body {
 
 /* -----------------PROFILE GLOBAL----------------- */
 
-.profile {
+.profile-left {
     position: fixed;
     z-index: 1;
     top: 0;
@@ -20,6 +20,18 @@ body {
     background: #333437;
     width: 350px;
     height: 100%;
+}
+
+.profile-right {
+    margin: auto;
+    margin-left: 350px;
+    padding: 40px;
+    /* height: 100%; */
+    overflow: hidden;
+}
+
+.hide {
+    display: none;
 }
 
 .profile-picture {
@@ -54,13 +66,22 @@ body {
     width: 180px;
 }
 
+.divider {
+    border: solid 1px #333437;
+}
+
 /* -----------------PROFILE ARTIST----------------- */
 
 .band-genres {
     font-style: italic;
 }
 
-/* -----------------PROFILE ARTIST----------------- */
+.instruments {
+    font-style: italic;
+    margin-left: 30px;
+}
+
+/* -----------------PROFILE VENUE----------------- */
 
 .venue-address {
     margin-bottom: 0px;
@@ -68,20 +89,12 @@ body {
 
 /* -----------------GIG DIPSLAY----------------- */
 
-#feed {
-    margin: auto;
-    margin-left: 350px;
-    padding: 40px;
-    height: 100%;
-    overflow: hidden;
-}
-
 #search {
     margin: auto;
     width: 100%;
 }
 
-#card-display {
+.card-display {
     margin-top: 20px;
     height: 100%;
     padding-bottom: 20px;
@@ -91,7 +104,7 @@ body {
     overflow: auto;
 }
 
-#card-display::-webkit-scrollbar {
+.card-display::-webkit-scrollbar {
     width: 0 !important;
     overflow: -moz-scrollbars-none;
     -ms-overflow-style: none;
@@ -140,14 +153,7 @@ body {
     bottom: 0; 
 }
 
-/* -----------------VENUE----------------- */
-
-#gig-form {
-    margin: auto;
-    margin-left: 350px;
-    padding: 40px;
-    height: 100%;
-}
+/* -----------------VENUE FORM DISPLAY----------------- */
 
 #post-gig {
     font-size: 36px;
