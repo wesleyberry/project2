@@ -13,8 +13,7 @@
                             <p class="card-desc">{{this.description}}</p>
                             <hr>
                             <div class="date">{{this.date}}</div>
-                            <button data-id="{{this.id}}"
-                                class="btn btn-primary btn-lg btn-main delete card-button">Book</button>
+                            <button data-id="{{this.id}}" class="btn btn-primary btn-lg btn-main delete card-button">Delete</button>
                         </div>
                     </div>
                     {{!-- {{/unless}} --}}
@@ -39,6 +38,8 @@
             <p>{{venue.phone}}</p>
             <button class="btn btn-primary btn-lg btn-main gig-view" data-toggle="modal" data-target="#gig-modal">View Gigs</button>
         </div>
+        <button class="btn btn-primary btn-lg btn-main gig-view" data-toggle="modal" data-target="#gig-modal">View Gigs</button>
+        <button class="btn btn-primary btn-lg btn-main gig-view" id="logout">Logout</button>  
     </div>
 </div>
 
@@ -104,3 +105,7 @@
 
 <!-- Link to makeGig.js to handle the click event, post request, and calendar functionality -->
 <script type="text/javascript" src="../js/makeGig.js"></script>
+
+{{!-- Link to handle the logout button --}}
+<script type="text/javascript" src="/js/logout.js"></script>
+<script type="text/javascript" src="/js/delete-gig.js"></script>
