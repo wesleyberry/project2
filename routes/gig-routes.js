@@ -16,8 +16,8 @@ module.exports = function(app) {
                     description: req.body.gigDes,
                     genre: req.body.gigGenre,
                     // VenueId: req.user.id,
-                    gigName: venueInfo[0].image,
-                    profileImage: venueInfo[0].venueName
+                    gigName: venueInfo[0].venueName,
+                    profileImage: venueInfo[0].image
         }).then(function() {
             res.send(200);
         }).catch(function(err) {
