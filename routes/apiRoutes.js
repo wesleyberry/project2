@@ -5,6 +5,7 @@ var path = require("path");
 var passport = require("../config/passport");
 var express    = require('express');
 var bodyParser = require('body-parser');
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 var app = express();
 

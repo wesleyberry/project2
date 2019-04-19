@@ -2,6 +2,7 @@
 var db = require("../models");
 var express    = require('express');
 var bodyParser = require('body-parser');
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 var app = express();
 
@@ -11,7 +12,7 @@ app.use(bodyParser.json());
 
 module.exports = function (app) {
 
-    app.post("/api/venues", function(req, res) {
+    app.post("/api/venues", isAuthenticated, function(req, res) {
         db.Venue.create({
             venueName: req.body.venueName,
             street_address: req.body.address,

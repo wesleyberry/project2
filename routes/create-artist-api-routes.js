@@ -5,10 +5,11 @@ var bodyParser = require('body-parser');
 var app = express();
 app.use(bodyParser.urlencoded());
 app.use(bodyParser.json());
+var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
 
-    app.post("/api/artists", function(req, res) {
+    app.post("/api/artists", isAuthenticated, function(req, res) {
         console.log(req.body);
         db.Artist.create({
             artistName: req.body.artistName,
