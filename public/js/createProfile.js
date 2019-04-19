@@ -1,6 +1,8 @@
 /* eslint-disable no-console */
 /* eslint-disable no-undef */
 $(function () {
+    $("#artist-create-message").hide();
+    $("#venue-create-message").hide();
 
 // create artist profile
     $("#artist-create").on("click", function () {
@@ -18,7 +20,7 @@ $(function () {
         console.log(artistName);
        
         if (!artistName || !genre || !instruments || !website || !phone || !memberNum || !email) {
-            alert("Please fill out every field");
+            $("#artist-create-message").show();
         } else {
             // clear form
             $("#artist-name").val("");
@@ -70,7 +72,7 @@ $(function () {
         var venueProfileImg = $("#venue-profile-img").val().trim();
 
         if (!venueName || !address || !city || !state || !zip || !venueEmail || !phone || !website) {
-            alert("Please fill out every field");
+            $("#venue-create-message").show();
         } else {
 
             // clear form
