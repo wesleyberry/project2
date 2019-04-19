@@ -11,7 +11,7 @@ module.exports = function (app) {
         }).then(function (dbVenue) {
             db.Gig.findAll({
                 where:{
-                    VenueId: req.user.id
+                    VenueId: dbVenue.id
                 }
             }).then(function(dbGig) {
                 var hbObject = {
