@@ -7,7 +7,12 @@ $(function() {
         $.put("/api/gigs", {
             data: bookId
         }).then(function(data) {
-            console.log(data);
+            location.reload();
+            if(data) {
+                console.log("Booked");
+            } else {
+                console.log("Could not book");
+            }
         });
     });
 });

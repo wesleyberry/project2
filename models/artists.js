@@ -6,7 +6,7 @@ module.exports = function( sequelize, DataTypes ) {
         numberOfMembers: DataTypes.INTEGER,
         email: DataTypes.STRING,
         phone: DataTypes.STRING,
-        profileImage: DataTypes.STRING,
+        profileImage: DataTypes.TEXT,
         website: DataTypes.STRING
     });
 
