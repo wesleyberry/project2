@@ -20,39 +20,45 @@
 
 <!-- POST A GIG FORM -->
 <div class="profile-right">
-    <button class="btn btn-primary btn-lg btn-scnd gig-view">View Gigs</button>
-    <div id="post-gig">Post a Gig</div>
-    <br>
-    <div class="createGigForm">
-        <form>
-            <div class="form-group">
-                <label for="gig-des">Gig Description:</label>
-                <input type="text" class="form-control" id="gig-des" placeholder="">
-            </div>
-            <div class="form-group">
-                <label for="genres">Genre(s):</label>
-                <input type="text" class="form-control" id="gig-genre" placeholder="">
-            </div>
-            <div class="bootstrap-iso">
-                <div class="form-group date-label">
-                    <label for="date">Date:</label>
-                    <div class="input-group">
-                        <div class="input-group-addon">
-                            <i class="fa fa-calendar"></i>
+    {{!-- start buttons --}}
+    <button class="btn btn-primary btn-lg btn-main" id="dis-gigs-btn">View Gigs</button>
+    <button class="btn btn-primary btn-lg btn-main" id="dis-make-gig-form-btn">Make a Gig</button>
+    {{!-- end button --}}
+
+    <div class="div" id="display-make-gig-form">
+        <div id="post-gig">Post a Gig</div>
+        <br>
+        <div class="createGigForm">
+            <form>
+                <div class="form-group">
+                    <label for="gig-des">Gig Description:</label>
+                    <input type="text" class="form-control" id="gig-des" placeholder="">
+                </div>
+                <div class="form-group">
+                    <label for="genres">Genre(s):</label>
+                    <input type="text" class="form-control" id="gig-genre" placeholder="">
+                </div>
+                <div class="bootstrap-iso">
+                    <div class="form-group date-label">
+                        <label for="date">Date:</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">
+                                <i class="fa fa-calendar"></i>
+                            </div>
+                            <input class="form-control" id="gig-date" name="date" placeholder="MM/DD/YYYY" type="text" />
                         </div>
-                        <input class="form-control" id="gig-date" name="date" placeholder="MM/DD/YYYY" type="text" />
                     </div>
                 </div>
-            </div>
-            <br>
-            <button class="btn btn-primary btn-lg btn-main" id="gig-create" type="submit" value="Post-Gig">Post Gig</button>
-        </form>
+                <br>
+                <button class="btn btn-primary btn-lg btn-main" id="gig-create" type="submit" value="Post-Gig">Post Gig</button>
+            </form>
+        </div>
     </div>
 </div>
 
 
 {{!-- VENUE GIG VIEW: allows the venue to see all gig that they have posted --}}
-<div class="profile-right hide">
+<div class="profile-right hide" id="display-venue-gigs">
     <div class="card-display">
         {{#each gigs}}
         {{!-- {{#unless isBooked}} --}}
@@ -78,7 +84,7 @@
 <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
 
-<!-- Link to makeGig.js to handle the click event, post request, and calendar functionality -->
+<!-- Link to makeGig.js to handle the click event, post request, and calendar functionality && toggle js-->
 <script type="text/javascript" src="../js/makeGig.js"></script>
 
 {{!-- Link to handle the logout button --}}

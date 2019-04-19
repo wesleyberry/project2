@@ -37,3 +37,29 @@ $("#gig-create").on("click", function (event) {
     });
 
 });
+
+// this is the funcationality to toggle between the form and display gigs
+$(document).ready(function(){
+    $("#display-venue-gigs").hide();
+    $("#dis-make-gig-form-btn").hide();
+
+    $("#dis-gigs-btn").on("click", function(event){
+        event.preventDefault();
+        
+        $("#display-venue-gigs").show();
+        $("#dis-gigs-btn").hide();
+        $("#dis-make-gig-form-btn").show();
+        $("#display-make-gig-form").hide();
+        
+    })
+
+    $("#dis-make-gig-form-btn").on("click", function(event){
+        event.preventDefault();
+        
+        $("#display-venue-gigs").hide();
+        $("#dis-gigs-btn").show();
+        $("#dis-make-gig-form-btn").hide();
+        $("#display-make-gig-form").show();
+
+    })
+});
