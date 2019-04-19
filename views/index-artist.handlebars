@@ -37,7 +37,7 @@
     </div>
     <select name="id" class="custom-select" id="inputGroupSelect03">
       <option selected>Select Venue</option>
-      {{#each gig}}
+      {{#each gigs}}
       <option value="{{this.gigName}}">{{this.gigName}}</option>
       {{/each}}
     </select>
@@ -46,7 +46,7 @@
   {{!-- venue filter --}}
 
   <div id="card-display">
-    {{#each gig}}
+    {{#each gigs}}
     <div class="gig-card" data-toggle="modal" data-target="#form-modal">
       <img class="image" src={{this.profileImage}} alt="venue-image">
       <div class="card-text">
