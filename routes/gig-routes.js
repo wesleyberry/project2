@@ -18,7 +18,7 @@ module.exports = function(app) {
                     genre: req.body.gigGenre,
                     VenueId: venueInfo[0].id,
                     gigName: venueInfo[0].venueName,
-                    profileImage: venueInfo[0].image
+                    image: venueInfo[0].image
         }).then(function() {
             res.send(200);
         }).catch(function(err) {
@@ -41,6 +41,20 @@ module.exports = function(app) {
             res.send(hbsObject);
         });
     });
+
+    app.put("/api/gigs/:id", function (req, res) {
+        var id = req.params.id
+        console.log(id);
+        db.Gig.update({
+            isBooked: true
+            }, { where: {
+                id: id
+            }
+        }).then(function(results) {
+            res.send(results);
+        });
+    });
+
     // Get all gigs for specific user
     // app.get("/api/gigs", function(req, res) {
     //     console.log(req.user.id);

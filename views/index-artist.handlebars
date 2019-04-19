@@ -10,13 +10,16 @@
 </div>
 
 <!-- PROFILE -->
-<div class="profile">
+<div class="profile-left">
   <div class="profile-picture">
     <img class="image" src={{artist.profileImage}} alt="profile-image">
   </div>
   <div class="profile-content">
-    <h1 class="band-name">{{artist.artistName}}</h1>
+    <h1 class="name">{{artist.artistName}}</h1>
     <p class="band-genres">{{artist.genre}}</p>
+    <br>
+    <p>Members: <strong>{{artist.numberOfMembers}}</strong></p>
+    <p class="instruments">{{artist.instrumentation}}</p>
     <div class="profile-bottom">
       <p>{{artist.email}}</p>
       <p>{{artist.website}}</p>
@@ -27,10 +30,9 @@
 </div>
 
 <!-- FEED -->
-<div id="feed">
+<div class="profile-right">
 
-  {{!-- venue filter --}}
-
+  {{!-- VENUE FILTER --}}
   <form class="input-group mb-3">
     <div class="input-group-prepend">
       <button class="btn btn-outline-secondary" type="submit" id="filter">Filter</button>
@@ -42,21 +44,23 @@
       {{/each}}
     </select>
   </form>
+  {{!-- VENUE FILTER --}}
 
-  {{!-- venue filter --}}
-
-  <div id="card-display">
+  <div class="card-display">
     {{#each gigs}}
-    <div class="gig-card" data-toggle="modal" data-target="#form-modal">
-      <img class="image" src={{this.profileImage}} alt="venue-image">
+    {{!-- {{#unless isBooked}} --}}
+    <div class="gig-card">
+      <img class="image" src={{this.image}} alt="venue-image">
       <div class="card-text">
         <div class="card-title">{{this.gigName}}</div>
-        <p class="card-desc">{{this.discription}}</p>
-        <hr>
-        <div class="card-date">{{this.date}}</div>
-        <button class="btn btn-primary btn-lg btn-main book card-button">Book</button>
+        <p class="card-desc">{{this.description}}</p>
+        {{!-- <hr class="divider"> --}}
+        <div class="card-genre">{{this.genre}}</div>
+        <div class="card-date"><strong>{{this.date}}</strong></div>
+        <button class="btn btn-primary btn-lg btn-main book card-button" data-id="{{this.id}}">Book</button>
       </div>
     </div>
+    {{!-- {{/unless}} --}}
     {{/each}}
   </div>
 
@@ -64,3 +68,4 @@
 
 {{!-- link to handle the logout button --}}
 <script type="text/javascript" src="/js/logout.js"></script>
+<script type="text/javascript" src="/js/book-a-band.js"></script>
