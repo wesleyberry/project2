@@ -6,7 +6,7 @@ module.exports = function(app) {
     app.post("/api/gigs", function(req, res) {
         db.Venue.findAll({
             where: {
-                id: req.user.id
+                UserId: req.user.id
             }
         }).then(function(venueInfo) {
             console.log(venueInfo[0].image);
