@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 var passport = require("passport");
 var LocalStrategy = require("passport-local").Strategy;
 var isAuthenticated = require("../config/middleware/isAuthenticated");
