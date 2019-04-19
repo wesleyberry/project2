@@ -25,7 +25,7 @@ module.exports = function (app) {
         });
     });
 
-    app.delete("/api/gigs/:id", isAuthenticated, function(req, res) {
+    app.delete("/api/gigs/:id", function(req, res) {
         console.log(req.params.id);
         var id = req.params.id;
         db.Gig.destroy({

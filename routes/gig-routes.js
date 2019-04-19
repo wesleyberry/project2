@@ -28,7 +28,7 @@ module.exports = function(app) {
         });
     });
     // Get one specific gig
-    app.get("/api/gigs/:gigId", function (req, res) {
+    app.get("/api/gigs/:id", function (req, res) {
         var gigId = req.params.id
         db.Gig.findOne({
             where: {
