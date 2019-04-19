@@ -22,8 +22,6 @@ body {
     height: 100%;
 }
 
-/* -----------------PROFILE ARTIST----------------- */
-
 .profile-picture {
     position: relative;
     width: 100%;
@@ -33,13 +31,9 @@ body {
     padding: 20px;
 }
 
-.band-name {
+.name {
     font-weight: 900;
     margin-bottom: 20px;
-}
-
-.band-genres {
-    font-style: italic;
 }
 
 .profile-bottom {
@@ -58,6 +52,18 @@ body {
     margin: auto;
     margin-top: 30px;
     width: 180px;
+}
+
+/* -----------------PROFILE ARTIST----------------- */
+
+.band-genres {
+    font-style: italic;
+}
+
+/* -----------------PROFILE ARTIST----------------- */
+
+.venue-address {
+    margin-bottom: 0px;
 }
 
 /* -----------------GIG DIPSLAY----------------- */

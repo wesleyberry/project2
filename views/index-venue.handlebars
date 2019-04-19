@@ -13,7 +13,8 @@
                             <p class="card-desc">{{this.description}}</p>
                             <hr>
                             <div class="date">{{this.date}}</div>
-                            <button data-id="{{this.id}}" class="btn btn-primary btn-lg btn-main delete card-button">Delete</button>
+                            <button data-id="{{this.id}}"
+                                class="btn btn-primary btn-lg btn-main delete card-button">Delete</button>
                         </div>
                     </div>
                     {{!-- {{/unless}} --}}
@@ -30,16 +31,18 @@
         <img class="image" src={{venue.image}} alt="profile-image">
     </div>
     <div class="profile-content">
-        <h1 class="band-name">{{venue.venueName}}</h1>
-        <p class="band-genres"></p>
+        <h1 class="name">{{venue.venueName}}</h1>
+        <p class="venue-address">{{venue.street_address}}</p>
+        <p class="venue-address">{{venue.city}}, {{venue.state}} {{venue.zipcode}}</p>
+        <p></p>
         <div class="profile-bottom">
             <p>{{venue.email}}</p>
             <p>{{venue.website}}</p>
             <p>{{venue.phone}}</p>
             <button class="btn btn-primary btn-lg btn-main gig-view" data-toggle="modal" data-target="#gig-modal">View Gigs</button>
+            <button class="btn btn-primary btn-lg btn-main gig-view" id="logout">Logout</button>
         </div>
-        <button class="btn btn-primary btn-lg btn-main gig-view" data-toggle="modal" data-target="#gig-modal">View Gigs</button>
-        <button class="btn btn-primary btn-lg btn-main gig-view" id="logout">Logout</button>  
+
     </div>
 </div>
 
