@@ -41,6 +41,20 @@ module.exports = function(app) {
             res.send(hbsObject);
         });
     });
+
+    app.put("/api/gigs/:id", function (req, res) {
+        var id = req.params.id
+        console.log(id);
+        db.Gig.update({
+            isBooked: true
+            }, { where: {
+                id: id
+            }
+        }).then(function(results) {
+            res.send(results);
+        });
+    });
+
     // Get all gigs for specific user
     // app.get("/api/gigs", function(req, res) {
     //     console.log(req.user.id);
