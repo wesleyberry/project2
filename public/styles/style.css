@@ -66,11 +66,6 @@ body {
     width: 180px;
 }
 
-.divider {
-    border: solid 1px #333437;
-    margin-bottom: 10px;
-}
-
 /* -----------------PROFILE ARTIST----------------- */
 
 .band-genres {
@@ -141,13 +136,20 @@ body {
     font-size: 16px;
 }
 
+.divider {
+    border-top: solid 1px #333437;
+    margin-bottom: 10px;
+}
+
 .card-genre {
-    color: #af4ca3;
+    font-size: 12px;
+    /* color: #af4ca3; */
     font-style: italic;
+    margin-bottom: 8px;
 }
 
 .card-date {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 60px;
 }
 
