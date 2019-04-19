@@ -12,10 +12,9 @@ module.exports = function (app) {
                 }).then(function (dbArtist) {
                     var hbObject = {
                         artist: dbArtist,
-                        gigs: dbGig,
+                        gig: dbGig,
 
                     }
-                    // console.log(dbArtist);
                     res.render("index-artist", hbObject);
                 });
             });
