@@ -8,7 +8,7 @@ $(document).ready(function(){
           
           if(name === checkName){
               $(element).show();
-          }else if(name === "Select Venue"){
+          }else if(name === "All Venues"){
               $(element).show();
           }else{
               $(element).hide();
