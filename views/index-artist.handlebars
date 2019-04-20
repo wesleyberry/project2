@@ -38,9 +38,9 @@
       <button class="btn btn-outline-secondary" type="submit" id="filter">Filter</button>
     </div>
     <select name="id" class="custom-select" id="inputGroupSelect03">
-      <option selected>Select Venue</option>
-      {{#each gigs}}
-      <option value="{{this.gigName}}">{{this.gigName}}</option>
+      <option selected>All Venues</option>
+      {{#each venues}}
+      <option value="{{this.venueName}}">{{this.venueName}}</option>
       {{/each}}
     </select>
   </form>
