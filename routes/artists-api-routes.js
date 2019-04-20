@@ -11,14 +11,16 @@ module.exports = function (app) {
                         UserId: req.user.id
                     }
                 }).then(function (dbArtist) {
+                    db.Venue.findAll({}).then(function(dbVenue){
                     var hbObject = {
                         artist: dbArtist,
                         gigs: dbGig,
-
+                        venues:dbVenue
                     }
                     // console.log(dbArtist);
                     res.render("index-artist", hbObject);
                 });
             });
     });
+});
 }
