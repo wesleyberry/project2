@@ -109,7 +109,7 @@ INSERT INTO Venues (venueName, street_address, city, state, zipcode, phone, emai
                      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
                       NOW(), NOW(), 11);
 
-INSERT INTO Gigs (gigName, genre, street_address, city, state, zipcode, phone, description, image, date, isBooked, createdAt, updatedAt, ArtistId, VenueId ) 
+INSERT INTO Gigs (gigName, genre, street_address, city, state, zipcode, phone, description, image, date, isBooked, createdAt, updatedAt, VenueId ) 
             VALUES ( "Hole in the Wall",
                     "Rock",
                      "2538 Guadalupe St.", "Austin", "TX", "78705", 
@@ -117,7 +117,7 @@ INSERT INTO Gigs (gigName, genre, street_address, city, state, zipcode, phone, d
                      "Electric Boogaloo",
                      "http://www.one2onebar.com/index_files/stacks-image-55009ff.jpg",
                      "4/26/2019 8:00PM",
-                     false, NOW(), NOW(), 0, 1 ),
+                     false, NOW(), NOW(), 1 ),
 
                     ( "Emo's",
                      "RocknRoll!!",
@@ -126,7 +126,7 @@ INSERT INTO Gigs (gigName, genre, street_address, city, state, zipcode, phone, d
                      "Aquatic Boogaloo",
                      "https://static.spacecrafted.com/d0ff1849232e40769aef8fe7be7d853d/i/c1a873b75fab499d8654dc751d9f5554/2/GCuCv726gZycFxatknDdac/SEVENLIONS-EMOS-11.29.18-11_1920w.jpg",
                      "4/26/2019 8:00PM",
-                     false, NOW(), NOW(), 0, 2 ),
+                     false, NOW(), NOW(), 2 ),
 
                      ( "Lit Lounge",
                        "Smooth Jazz",
@@ -135,7 +135,7 @@ INSERT INTO Gigs (gigName, genre, street_address, city, state, zipcode, phone, d
                        "Premiere destination for Austin’s elite crowd ",
                        "https://litloungeaustin.com/images/page2-img1.jpg",
                        "Saturday, April 27, 2019, 7:00pm - 10:00pm",
-                       false, NOW(), NOW(), 0, 5 ),
+                       false, NOW(), NOW(), 5 ),
 
                      ("Broken Spoke",
                      "Both kinds - Country AND Western",
@@ -144,7 +144,7 @@ INSERT INTO Gigs (gigName, genre, street_address, city, state, zipcode, phone, d
                      "Honky Tonk",
                      "https://images.unsplash.com/photo-1508252592163-5d3c3c559f36?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
                      "Saturday Night,  April 27, 2019, 9:00pm - 11:59pm",
-                       false, NOW(), NOW(), 0, 6 ),
+                       false, NOW(), NOW(), 6 ),
 
                      ("One-2-One Bar",
                      "Anything goes!!",
@@ -153,7 +153,7 @@ INSERT INTO Gigs (gigName, genre, street_address, city, state, zipcode, phone, d
                      "Rager",
                      "https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
                      "Saturday Night, April 27, 2019, 8:00 to 11:00 PM",
-                     false, NOW(), NOW(), 0, 7 ),
+                     false, NOW(), NOW(), 7 ),
 
                     ( "Hole in the Wall",
                      "Home spun ANYTHING!",
@@ -162,7 +162,7 @@ INSERT INTO Gigs (gigName, genre, street_address, city, state, zipcode, phone, d
                      "Electric Boogaloo",
                      "http://www.one2onebar.com/index_files/stacks-image-55009ff.jpg",
                      "Friday Night, April 26, 2019, 8:00 to 11:00",
-                     false, NOW(), NOW(), 0, 1 ),
+                     false, NOW(), NOW(), 1 ),
 
                     ( "Emo's",
                      "GRUNGE!!",
@@ -171,7 +171,7 @@ INSERT INTO Gigs (gigName, genre, street_address, city, state, zipcode, phone, d
                      "The dirtier the better!!",
                      "https://static.spacecrafted.com/d0ff1849232e40769aef8fe7be7d853d/i/c1a873b75fab499d8654dc751d9f5554/2/GCuCv726gZycFxatknDdac/SEVENLIONS-EMOS-11.29.18-11_1920w.jpg",
                      "Saturday Night, April 27, 2019, 8:00 to 11:00 PM",
-                     false, NOW(), NOW(), 0, 2 ),
+                     false, NOW(), NOW(), 2 ),
 
                      ( "Lit Lounge",
                       "Smoooooooooth",
@@ -180,4 +180,4 @@ INSERT INTO Gigs (gigName, genre, street_address, city, state, zipcode, phone, d
                        "Premiere destination for Austin’s elite crowd ",
                        "https://litloungeaustin.com/images/page2-img1.jpg",
                        "Saturday, March 4, 2019, 7:00pm - 10:00pm",
-                       false, NOW(), NOW(), 0, 5 );
+                       false, NOW(), NOW(), 5 );

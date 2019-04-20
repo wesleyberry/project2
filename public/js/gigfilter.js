@@ -6,9 +6,13 @@ $(document).ready(function(){
       $(".gig-card").each(function(i,element){
           const checkName = $(element).children(".card-text").children(".card-title").text()
           
+          /* When filtering the 'card' view for an artist, part of the support for other 
+           * options would have some code here.  'name' is the name of the venue we are
+           * filtering on.  If we wanted to filter to only show gigs for the current 
+           * artist, we could do a few things to help that here. */
           if(name === checkName){
               $(element).show();
-          }else if(name === "Select Venue"){
+          }else if(name === "All Venues"){
               $(element).show();
           }else{
               $(element).hide();
