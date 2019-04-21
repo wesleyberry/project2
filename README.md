@@ -9,13 +9,13 @@ GigBook is a full-stack web application that allows artists and venues to connec
 #### GigBook's landing page on a large screen
 ![Landing Page Desktop View](/screenshots/gigbooklanding.JPG)
 #### A venue's page on a large screen
-![Landing Page Desktop View](/screenshots/gigbookvenue.JPG)
+![Venue Page Desktop View](/screenshots/gigbookvenue.JPG)
 #### An artist's page on a large screen
-![Landing Page Desktop View](/screenshots/gigbookartist.JPG)
+![Artist Page Desktop View](/screenshots/gigbookband.JPG)
 #### GigBook's landing page on the Galaxy S5
-![Landing Page Desktop View](/screenshots/gigbookgalaxys5.JPG)
+![Landing Page Galaxy S5 View](/screenshots/gigbookgalaxys5.JPG)
 #### GigBook's landing page on the IPhone X
-![Landing Page Desktop View](/screenshots/gigbookiphonex.JPG)
+![Landing Page IPhone X View](/screenshots/gigbookiphonex.JPG)
 - - -
 ## Why GigBook is useful
 GigBook allows users to dynamically create a venue profile or an artist profile. This profile helps a user advertise themselves and connect with other users.
