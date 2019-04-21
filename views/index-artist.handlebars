@@ -1,9 +1,32 @@
-<!-- CARD MODAL -->
-<div class="modal fade" id="form-modal" tabindex="-1" role="dialog" aria-hidden="true">
+<!-- VIEW PROFILE MODAL -->
+<div class="modal fade" id="profile-modal" tabindex="-1" role="dialog" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">Login</div>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
       <div class="modal-body">
-        INSERT VENUE PROFILE CODE HERE!!
+        <div class="profile-picture">
+          <img class="image-profile" src={{artist.profileImage}} alt="profile-image">
+        </div>
+        <div class="profile-content">
+          <h1 class="name">{{artist.artistName}}</h1>
+          <p class="band-genres">{{artist.genre}}</p>
+          <br>
+          <p>Members: <strong>{{artist.numberOfMembers}}</strong></p>
+          <p class="instruments">{{artist.instrumentation}}</p>
+          <div class="profile-bottom">
+            <p>{{artist.email}}</p>
+            <p>
+              <a class="website-link" href="{{artist.website}}" target="_blank">{{artist.website}}</a>
+            </p>
+            <p>{{artist.phone}}</p>
+            <button class="btn btn-primary btn-lg logout">Logout</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -12,7 +35,7 @@
 <!-- PROFILE -->
 <div class="profile-left">
   <div class="profile-picture">
-    <img class="image" src={{artist.profileImage}} alt="profile-image">
+    <img class="image-profile" src={{artist.profileImage}} alt="profile-image">
   </div>
   <div class="profile-content">
     <h1 class="name">{{artist.artistName}}</h1>
@@ -22,9 +45,11 @@
     <p class="instruments">{{artist.instrumentation}}</p>
     <div class="profile-bottom">
       <p>{{artist.email}}</p>
-      <p>{{artist.website}}</p>
+      <p>
+        <a class="website-link" href="{{artist.website}}" target="_blank">{{artist.website}}</a>
+      </p>
       <p>{{artist.phone}}</p>
-      <button id="logout" class="btn btn-primary btn-lg btn-main logout">Logout</button>
+      <button class="btn btn-primary btn-lg logout">Logout</button>
     </div>
   </div>
 </div>
@@ -32,8 +57,11 @@
 <!-- FEED -->
 <div class="profile-right">
 
+  <button class="btn btn-primary btn-lg btn-scnd view-profile" data-toggle="modal"
+    data-target="#profile-modal">View Profile</button>
+
   {{!-- VENUE FILTER --}}
-  <form class="input-group mb-3">
+  <form class="input-group mb-3 venue-filter">
     <div class="input-group-prepend">
       <button class="btn btn-outline-secondary" type="submit" id="filter">Filter</button>
     </div>
@@ -46,6 +74,7 @@
   </form>
   {{!-- VENUE FILTER --}}
 
+  {{!-- ALL AVAILABLE GIGS --}}
   <div class="card-display">
     {{#each gigs}}
     {{#unless isBooked}}
@@ -56,13 +85,14 @@
         <p class="card-desc">{{this.description}}</p>
         {{!-- <hr class="divider"> --}}
         <div class="card-genre">{{this.genre}}</div>
-        <div class="card-date"><strong>{{this.date}}</strong></div>
+        <div class="card-date">{{this.date}}</div>
         <button class="btn btn-primary btn-lg btn-main book card-button" data-id="{{this.id}}">Book</button>
       </div>
     </div>
     {{/unless}}
     {{/each}}
   </div>
+
 
 </div>
 

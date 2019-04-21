@@ -1,7 +1,41 @@
+<!-- VIEW PROFILE MODAL -->
+<div class="modal fade" id="profile-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="modal-title">Login</div>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="profile-picture">
+                    <img class="image-profile" src={{venue.image}} alt="profile-image">
+                </div>
+                <div class="profile-content">
+                    <h1 class="name">{{venue.venueName}}</h1>
+                    <p class="venue-address">{{venue.street_address}}</p>
+                    <p class="venue-address">{{venue.city}}, {{venue.state}} {{venue.zipcode}}</p>
+                    <p></p>
+                    <div class="profile-bottom">
+                        <p>{{venue.email}}</p>
+                        <p>
+                            <a class="website-link" href="{{venue.website}}" target="_blank">{{venue.website}}</a>
+                        </p>
+                        <p>{{venue.phone}}</p>
+                        <button class="btn btn-primary btn-lg logout">Logout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
 <!-- PROFILE -->
 <div class="profile-left">
     <div class="profile-picture">
-        <img class="image" src={{venue.image}} alt="profile-image">
+        <img class="image-profile" src={{venue.image}} alt="profile-image">
     </div>
     <div class="profile-content">
         <h1 class="name">{{venue.venueName}}</h1>
@@ -10,23 +44,28 @@
         <p></p>
         <div class="profile-bottom">
             <p>{{venue.email}}</p>
-            <p>{{venue.website}}</p>
+            <p>
+                <a class="website-link" href="{{venue.website}}" target="_blank">{{venue.website}}</a>
+            </p>
             <p>{{venue.phone}}</p>
-            <button class="btn btn-primary btn-lg btn-main gig-view" id="logout">Logout</button>
+            <button class="btn btn-primary btn-lg logout">Logout</button>
         </div>
-
     </div>
 </div>
 
 <!-- POST A GIG FORM -->
 <div class="profile-right">
+
+    <button class="btn btn-primary btn-lg btn-scnd view-profile" data-toggle="modal" data-target="#profile-modal">View
+        Profile</button>
+
     {{!-- start buttons --}}
-    <button class="btn btn-primary btn-lg btn-main" id="dis-gigs-btn">View Gigs</button>
-    <button class="btn btn-primary btn-lg btn-main" id="dis-make-gig-form-btn">Make a Gig</button>
+    <button class="btn btn-primary btn-lg btn-scnd" id="dis-gigs-btn">View Gigs</button>
+    <button class="btn btn-primary btn-lg btn-scnd" id="dis-make-gig-form-btn">Make a Gig</button>
     {{!-- end button --}}
 
     <div class="div" id="display-make-gig-form">
-        <div id="post-gig">Post a Gig</div>
+        <div class="main-title">Post a Gig</div>
         <br>
         <div class="createGigForm">
             <form>
@@ -45,38 +84,65 @@
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
                             </div>
-                            <input class="form-control" id="gig-date" name="date" placeholder="MM/DD/YYYY" type="text" />
+                            <input class="form-control" id="gig-date" name="date" placeholder="MM/DD/YYYY"
+                                type="text" />
                         </div>
                     </div>
                 </div>
                 <br>
-                <button class="btn btn-primary btn-lg btn-main" id="gig-create" type="submit" value="Post-Gig">Post Gig</button>
+                <button class="btn btn-primary btn-lg btn-main" id="gig-create" type="submit" value="Post-Gig">Post
+                    Gig</button>
             </form>
         </div>
     </div>
-</div>
 
-
-{{!-- VENUE GIG VIEW: allows the venue to see all gig that they have posted --}}
-<div class="profile-right hide" id="display-venue-gigs">
-    <div class="card-display">
-        {{#each gigs}}
-        {{!-- {{#unless isBooked}} --}}
-        <div class="gig-card" data-toggle="modal" data-target="#form-modal">
-            <img class="image" src={{this.image}} alt="venue-image">
-            <div class="card-text">
-                <div class="card-title">{{this.gigName}}</div>
-                <p class="card-desc">{{this.description}}</p>
-                <hr class="divider">
-                <div class="card-genre">{{this.genre}}</div>
-                <div class="card-date">{{this.date}}</div>
-                <button data-id="{{this.id}}" class="btn btn-primary btn-lg btn-main delete card-button">Delete</button>
+    {{!-- VENUE GIG VIEW: allows the venue to see all gig that they have posted --}}
+    <div class="hide" id="display-venue-gigs">
+        <div class="main-title">Live Listings</div>
+        <hr class="divider">
+        <div class="card-display">
+            {{#each gigs}}
+            {{#unless isBooked}}
+            <div class="gig-card" data-toggle="modal" data-target="#form-modal">
+                <img class="image" src={{this.image}} alt="venue-image">
+                <div class="card-text">
+                    <div class="card-title">{{this.gigName}}</div>
+                    <p class="card-desc">{{this.description}}</p>
+                    <div class="card-genre">{{this.genre}}</div>
+                    <div class="card-date">{{this.date}}</div>
+                    <button data-id="{{this.id}}"
+                        class="btn btn-primary btn-lg btn-main delete card-button">Delete</button>
+                </div>
             </div>
+            {{/unless}}
+            {{/each}}
         </div>
-        {{!-- {{/unless}} --}}
-        {{/each}}
+        
+        <div class="main-title">Booked Gigs</div>
+        <hr class="divider">
+        <div class="card-display">
+            {{#each gigs}}
+            {{#if isBooked}}
+            <div class="gig-card" data-toggle="modal" data-target="#form-modal">
+                <img class="image" src={{this.image}} alt="venue-image">
+                <div class="card-text">
+                    <div class="card-title">{{this.gigName}}</div>
+                    <p class="card-desc">{{this.description}}</p>
+                    <div class="card-genre">{{this.genre}}</div>
+                    <div class="card-date">{{this.date}}</div>
+                    <button data-id="{{this.id}}"
+                        class="btn btn-primary btn-lg btn-main delete card-button">Delete</button>
+                </div>
+            </div>
+            {{/if}}
+            {{/each}}
+        </div>
     </div>
+
 </div>
+
+
+
 
 <!-- Include Date Range Picker -->
 <script type="text/javascript"
