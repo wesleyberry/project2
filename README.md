@@ -58,7 +58,7 @@ GigBook allows users to dynamically create a venue profile or an artist profile.
 Developer Wesley Berry's email: wesleyberry52@gmail.com
 ## Who maintains and contributes to GigBook
 * George Arredondo
-* Wesley Berry [LinkedIn](https://www.linkedin.com/in/wesley-berry-89742317a) - [GitHub](https://github.com/wesleyberry) - [online portfolio](https://wesleyberry.github.io/Responsive-Portfolio/)
+* Wesley Berry [LinkedIn](https://www.linkedin.com/in/wesley-berry-89742317a) - [GitHub](https://github.com/wesleyberry) - [online portfolio](https://wesleyberry.github.io/Personal_Portfolio/)
 * Wes Lebert
 * Eric Price
 * Ken Riley
